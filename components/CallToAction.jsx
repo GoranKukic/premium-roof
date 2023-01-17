@@ -26,7 +26,7 @@ const CallToAction = () => {
 
   return (
     <div
-      id="create-own-pool"
+      id="create-own-roof"
       className="h-[500px] relative bg-cta-gradient bg-no-repeat bg-cover bg-center flex justify-center items-center px-4"
     >
       <div className="absolute bg-cta-bg left-0 bottom-0 right-0 w-full h-[428px] bg-cover bg-center -z-10 "></div>
@@ -37,10 +37,10 @@ const CallToAction = () => {
       >
         <div className="mb-[55px]">
           <Headline
-            headline={'Oživi Svoju Oazu '}
+            headline={'Live Your Dream '}
             underline={
               <HeadlineUnderline
-                underlinedText={`Kreiraj Svoj Bazen`}
+                underlinedText={`Create Your Roof`}
                 color={'invert'}
               />
             }
@@ -56,7 +56,7 @@ const CallToAction = () => {
             type="button"
             onClick={openModal}
           >
-            Kontaktiraj Nas
+            Contact Us
           </button>
         </div>
         {/* Modal */}
@@ -90,14 +90,14 @@ const CallToAction = () => {
                     <div className="flex justify-between mb-[40px]">
                       <span className="text-solid-black font-['Prata'] font-normaluppercase text-[18px] xs:text-[24px] md:text-[32px] leadeing-[156%]">
                         <span className="relative">
-                          Kontaktiraj
+                          Contact
                           <Image
                             src={LineImage}
                             alt="Line"
                             className={`absolute left-[0px] bottom-[-7px] md:bottom-[-13px] right-[-10px] w-full filter`}
                           ></Image>
                         </span>
-                        <span> nas</span>
+                        <span> Us</span>
                       </span>
                       <svg
                         width="31"

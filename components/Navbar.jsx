@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-scroll/modules';
-import Image from 'next/image';
-import ChevronDown from '../public/images/ChevronDown.svg';
+// import Image from 'next/image';
+// import ChevronDown from '../public/images/ChevronDown.svg';
 import CtaButton from './UI/CtaButton';
 import Logo from './UI/Logo';
 import NavLinks from './UI/NavLinks';
@@ -59,7 +59,7 @@ const MobileNav = ({ open, setOpen }) => {
 
         <Link
           href="#"
-          to="create-own-pool"
+          to="create-own-roof"
           smooth={true}
           offset={-80}
           duration={500}
@@ -70,24 +70,6 @@ const MobileNav = ({ open, setOpen }) => {
           }
         >
           <CtaButton />
-        </Link>
-        {/* Language Switcher component should go here */}
-        <Link
-          href="#"
-          className="my-4 text-gray flex row justify-center"
-          to="/#"
-          onClick={() =>
-            setTimeout(() => {
-              setOpen(!open);
-            }, 100)
-          }
-        >
-          <span>HR</span>
-          <Image
-            src={ChevronDown}
-            alt="Chewron Down"
-            className="w-auto h-auto"
-          />
         </Link>
       </div>
     </div>
@@ -112,8 +94,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed z-50 inset-x-0 top-0 left-0 right-0 flex filter px-4 py-4 h-20 items-center transition-all duration-500 ease-in-out ${
-        navbar ? 'bg-white' : 'bg-transparent'
+      className={`fixed z-50 inset-x-0 top-0 left-0 right-0 flex filter px-4 py-4 h-20 items-center  transition-all duration-500 ease-in-out ${
+        navbar ? 'bg-white shadow-md' : 'bg-transparent'
       }`}
     >
       <MobileNav open={open} setOpen={setOpen} />
@@ -134,7 +116,7 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center">
           <Link
             href="#"
-            to="create-own-pool"
+            to="create-own-roof"
             activeClass="active"
             smooth={true}
             offset={-80}
@@ -142,18 +124,6 @@ const Navbar = () => {
           >
             <CtaButton />
           </Link>
-          {/* LanguageSwitcher component should go here */}
-
-          {/* <Link to="#" href="#">
-            <div className="flex row justify-center">
-              <span className="ml-3.5">HR</span>
-              <Image
-                src={ChevronDown}
-                alt="Chewron Down"
-                className="w-auto h-auto"
-              />
-            </div>
-          </Link> */}
         </div>
         <div className=" flex justify-end items-center lg:hidden">
           <div

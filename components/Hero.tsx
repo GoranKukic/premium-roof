@@ -2,10 +2,9 @@ import { useEffect } from 'react';
 import CtaButton from './UI/CtaButton';
 import { Link } from 'react-scroll/modules';
 import Image from 'next/image';
-import HeroInsta from '../public/images/hero-insta.webp';
 import HeadlineUnderline from './UI/HeadlineUnderline';
-import Badge from '../public/images/hero-badge.svg';
-import InstaBigIcon from '../public/images/insta-big.svg';
+import Badge from '../public/images/hero-badge.png';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -42,7 +41,7 @@ const Hero = () => {
           <div className="mt-[30px] flex justify-center align-center">
             <Link
               href="#"
-              to="create-own-pool"
+              to="create-own-roof"
               activeClass="active"
               smooth={true}
               offset={-80}
@@ -70,13 +69,13 @@ const Hero = () => {
           data-aos="fade-up"
           data-aos-duration="500"
           data-aos-easing="ease-in-out"
-          className="max-w-[1172px] w-full h-full px-4 mx-auto flex flex-col md:flex-row md:items-end items-center justify-center"
+          className="max-w-[1172px] w-full h-full px-4 mx-auto flex flex-row items-end  justify-center"
         >
           <div
             data-aos="fade-right"
             data-aos-duration="500"
             data-aos-easing="ease-in-out"
-            className="md:mt-[0] bg-solid-black md:w-full w-[70%] max-w-[420px] md:max-w-[unset] md:mb-[50px] flex justify-center md:justify-evenly items-center text-white p-4 md:p-[32px] gap-[20px] flex-wrap md:flex-nowrap"
+            className="md:mt-[0] bg-solid-black max-w-[720px] md:max-w-[unset] mb-[50px] flex justify-center md:justify-evenly items-center text-white p-4 md:p-[32px] gap-[20px] flex-wrap md:flex-nowrap"
           >
             <div className="flex flex-row gap-[10px] md:gap-[20px] flex-wrap md:flex-nowrap justify-center md:justify-evenly">
               <p>
@@ -85,7 +84,7 @@ const Hero = () => {
                 </span>
               </p>
               <p className="font-['Open Sans'] font-normal text-[16px] leadeing-[167%] flex justify-content items-center gap-[20px] text-center">
-                Zadovoljnih Klijenata
+                Satisfied Customers
               </p>
             </div>
             <div className="flex flex-row gap-[10px] md:gap-[20px] flex-wrap md:flex-nowrap justify-center md:justify-evenly">
@@ -95,35 +94,8 @@ const Hero = () => {
                 </span>
               </p>
               <p className="font-['Open Sans'] font-normal text-[16px] leadeing-[167%] flex justify-content items-center gap-[20px]">
-                Godina iskustva
+                Years of expirience
               </p>
-            </div>
-          </div>
-          <div
-            data-aos="fade-left"
-            data-aos-duration="500"
-            data-aos-easing="ease-in-out"
-            className="mb-none md:mb-[20px] w-[70%] max-w-[420px] md:min-w-[250px] "
-          >
-            <div className="relative">
-              <Image
-                src={HeroInsta}
-                alt="Instagram image"
-                priority={42}
-                className="w-full relative after:content-[url('/images/insta-icon.svg')] after:absolute after:w-[36px] after:h-[36px] after:top-[50%] after:left-[50%] z-99"
-              />
-              <div className="absolute left-[0] right-[0] top-[0] bottom-[0] my-auto flex items-center justify-center overflow-hidden">
-                <a
-                  href="https://www.instagram.com/premiumspabazeni"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="transform transition duration-500 hover:scale-110"
-                >
-                  <div className="w-[70px] sm:w-[124px] h-[70px] sm:h-[124px] flex items-center justify-center border border-solid border-white rounded-full">
-                    <Image src={InstaBigIcon} alt="Instagram" />
-                  </div>
-                </a>
-              </div>
             </div>
           </div>
         </div>

@@ -19,13 +19,13 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/PoolMaintenance.jsx",
+    "components/RoofMaintenance.tsx",
     "components/UI/BeforeAndAfterSlider.jsx",
     "components/PoolConfigurator.jsx",
-    "components/UI/CtaButton.jsx",
+    "components/UI/CtaButton.tsx",
     "components/Navbar.jsx",
     "components/UI/NavLinks.jsx",
     "components/UI/NavLinksMobile.jsx"
-  ],
+, "components/Footer.jsx"  ],
   "exclude": ["node_modules"]
 }

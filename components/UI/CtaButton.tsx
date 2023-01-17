@@ -1,4 +1,4 @@
-import { Link } from 'react-scroll/modules';
+// import { Link } from 'react-scroll/modules';
 
 const CtaButton = () => {
   return (
@@ -8,7 +8,7 @@ const CtaButton = () => {
       transition-colors duration-700 transform hover:bg-white hover:text-black active:bg-gray"
       type="button"
     >
-      Kreiraj svoj bazen
+      Make Order
     </button>
   );
 };

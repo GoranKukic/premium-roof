@@ -23,14 +23,14 @@ const AboutUs = () => {
           className="max-w-[545px] w-full mx-auto my-[144px] flex flex-col justify-center items-center"
         >
           <span className="text-center text-white font-['Open Sans'] font-semibold uppercase text-[16px] leadeing-[167%] tracking-[.03em]">
-            O nama
+            About us
           </span>
           <div className="mb-[34px]">
             <Headline
-              headline={'Tko je '}
+              headline={'Who is '}
               underline={
                 <HeadlineUnderline
-                  underlinedText={`\u00A0Premium Spa?`}
+                  underlinedText={`\u00A0Premium Roof?`}
                   color={'black'}
                 />
               }
@@ -48,7 +48,7 @@ const AboutUs = () => {
           </div>
           <Link
             href="#"
-            to="create-own-pool"
+            to="create-own-roof"
             activeClass="active"
             smooth={true}
             offset={-80}

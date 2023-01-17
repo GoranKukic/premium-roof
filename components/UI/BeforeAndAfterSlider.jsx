@@ -1,9 +1,9 @@
-import { useRef, useState, useEffect } from 'react';
+// import { useRef, useState, useEffect } from 'react';
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 import Image from 'next/image';
-import BeforeImage from '../../public/images/before.webp';
-import AfterImage from '../../public/images/after.webp';
+import BeforeImage from '../../public/images/before.jpg';
+import AfterImage from '../../public/images/after.jpg';
 import Dot from '../../public/images/dot.svg';
 import Arrow from '../../public/images/before-after-arrow.svg';
 import Pointer from '../../public/images/pointer.svg';
@@ -36,7 +36,7 @@ const BeforeAndAfterSlider = () => {
 
   return (
     <div className="max-w-[557px] w-full max-h-[557px] h-full relative">
-      <div className="absolute right-0 top-[-1px] z-10">
+      <div className="absolute right-[-1px] top-[-1px] z-10">
         <svg
           width="67"
           height="63"
@@ -46,7 +46,7 @@ const BeforeAndAfterSlider = () => {
         >
           <path
             d="M66.3863 0.792969H0.212891L66.3863 62.9699V0.792969Z"
-            fill="#F6F6F6"
+            fill="#F8FAFB "
           />
         </svg>
       </div>
@@ -66,15 +66,13 @@ const BeforeAndAfterSlider = () => {
           className="w-[5px] h-[5px] opacity-30"
         ></Image>
         <p className="ml-[2px] text-[12px] xs:text-[16px] font-normal text-black font-['Prata'] leadeing-[155%]">
-          Prevuci lijevo-desno
+          Swipe left-right
         </p>
       </div>
       <ReactBeforeSliderComponent
         firstImage={FIRST_IMAGE}
         secondImage={SECOND_IMAGE}
         delimiterIconStyles={delimiterIconStyles}
-        // onChangePercentPosition={true}
-        // onclick={calculateX}
       />
       <div className="absolute bottom-[-35px] left-0 flex gap-[6px] flex items-center">
         <Image src={Dot} alt="Dot" className="w-[5px] h-[5px]"></Image>
@@ -89,7 +87,7 @@ const BeforeAndAfterSlider = () => {
           className="w-[5px] h-[5px] opacity-30"
         ></Image>
         <p className="ml-[2px] text-[12px] xs:text-[16px] font-normal text-black font-['Prata'] leadeing-[155%]">
-          Prije i poslije čišćenja bazena
+          Before and after roof wash
         </p>
       </div>
     </div>

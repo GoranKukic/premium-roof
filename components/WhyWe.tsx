@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Paragraph from './UI/Paragraph';
 import PenIcon from '../public/images/pen.svg';
 import StarIcon from '../public/images/star.svg';
-import PoolIcon from '../public/images/pool.svg';
+import PoolIcon from '../public/images/bulb.svg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -16,7 +16,7 @@ const WhyWe = () => {
   return (
     <div
       id="why-we"
-      className="bg-why-we-gradient flex flex-col justify-center items-center px-4"
+      className="bg-why-we-gradient bg-solid-white flex flex-col justify-center items-center px-4"
     >
       <div
         data-aos="fade-down"
@@ -25,11 +25,11 @@ const WhyWe = () => {
         <div className="mb-[70px]">
           <Headline
             headline={[
-              'Zašto je ',
+              'Why ',
               <span key={Math.random()} className="text-blue">
-                Premium Spa
+                Premium Roof
               </span>,
-              ' izbor za tebe?',
+              ' is choice for you?',
             ]}
             key={1}
             color={'black'}
@@ -48,8 +48,8 @@ const WhyWe = () => {
               className="max-h-[40px] h-full max-w-[40px] w-full"
             />
             <span className='text-[20px] md:text-[24px] font-normal text-gray font-["Prata"] leadeing-[155%] text-black'>
-              Brzo i jednostavno, <span className="text-blue">online</span>{' '}
-              kreiranje
+              Quick and simple, <span className="text-blue">online</span>{' '}
+              creating
             </span>
             <Paragraph
               paragraph={
@@ -70,8 +70,7 @@ const WhyWe = () => {
               className="max-h-[40px] h-full max-w-[40px] w-full"
             />
             <span className='text-[20px] md:text-[24px] font-normal text-gray font-["Prata"] leadeing-[155%] text-black'>
-              Provjeren i zagarantovan,{' '}
-              <span className="text-blue">kvalitet</span>
+              Proven and guaranteed, <span className="text-blue">quality</span>
             </span>
             <Paragraph
               paragraph={
@@ -91,7 +90,8 @@ const WhyWe = () => {
               className="h-[40px] w-[40px]"
             />
             <span className='text-[20px] md:text-[24px]  font-normal text-gray font-["Prata"] leadeing-[155%] text-black max-w-[230px] md:max-w-[250px]'>
-              <span className="text-blue">Stručni</span> savjeti i mišljenja
+              <span className="text-blue">Professional</span> advice and
+              opinions
             </span>
             <Paragraph
               paragraph={

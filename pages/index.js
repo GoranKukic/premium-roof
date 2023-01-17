@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import PoolConfigurator from '../components/PoolConfigurator';
-import PoolMaintenance from '../components/PoolMaintenance';
+import RoofConfigurator from '../components/RoofConfigurator';
+import RoofMaintenance from '../components/RoofMaintenance';
 import AboutUs from '../components/AboutUs';
 import WhyWe from '../components/WhyWe';
 import Gallery from '../components/Gallery';
@@ -17,15 +17,15 @@ export default function Home() {
       <Head>
         <meta
           name="description"
-          content="Premium spa, ideja, dizajn, izgradnja i održavanje bazena"
+          content="Premium roof, idea, design, construction and maintenance of roof"
         />
       </Head>
       <HeadTitle />
       <div className="overflow-hidden">
         <Navbar />
         <Hero />
-        <PoolConfigurator />
-        <PoolMaintenance />
+        <RoofConfigurator />
+        <RoofMaintenance />
         <AboutUs />
         <WhyWe />
         <Gallery />

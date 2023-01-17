@@ -109,43 +109,43 @@ const Gallery = () => {
   const slidesData = [
     {
       id: 1,
-      img: '/images/gallery/pool1.jpg',
+      img: '/images/gallery/roof1.jpg',
     },
     {
       id: 2,
-      img: '/images/gallery/pool2.jpg',
+      img: '/images/gallery/roof2.jpg',
     },
     {
       id: 3,
-      img: '/images/gallery/pool3.jpg',
+      img: '/images/gallery/roof3.jpg',
     },
     {
       id: 4,
-      img: '/images/gallery/pool4.jpg',
+      img: '/images/gallery/roof4.jpg',
     },
     {
       id: 5,
-      img: '/images/gallery/pool5.jpg',
+      img: '/images/gallery/roof5.jpg',
     },
     {
       id: 6,
-      img: '/images/gallery/pool6.jpg',
+      img: '/images/gallery/roof6.jpg',
     },
     {
       id: 7,
-      img: '/images/gallery/pool7.jpg',
+      img: '/images/gallery/roof7.jpg',
     },
     {
       id: 8,
-      img: '/images/gallery/pool8.jpg',
+      img: '/images/gallery/roof8.jpg',
     },
     {
       id: 9,
-      img: '/images/gallery/pool9.jpg',
+      img: '/images/gallery/roof9.jpg',
     },
     {
       id: 10,
-      img: '/images/gallery/pool10.jpg',
+      img: '/images/gallery/roof10.jpg',
     },
   ];
 
@@ -173,7 +173,7 @@ const Gallery = () => {
         <Headline
           textPosition={'left'}
           color="white"
-          headline="Galerija Naših Radova"
+          headline="Our Work Gallery"
         />
       </div>
       <div className="w-full">
@@ -226,7 +226,7 @@ const Gallery = () => {
                     key={uuid}
                     className="slick-slide-image object-cover"
                     src={slide.img}
-                    alt="Pool"
+                    alt="Roof"
                     height={520}
                     width={800}
                   />
@@ -251,7 +251,7 @@ const Gallery = () => {
                 <Image
                   className="slick-slide-image object-cover"
                   src={slide.img}
-                  alt="Pool"
+                  alt="Roof"
                   height={520}
                   width={800}
                 />
@@ -313,7 +313,7 @@ const Gallery = () => {
                           <Image
                             key={uuid}
                             src={slidesData[0].img}
-                            alt="Pool"
+                            alt="Roof"
                             className="w-auto h-auto object-cover"
                             fill
                             sizes="(max-width: 960px) 100vw"
@@ -323,7 +323,7 @@ const Gallery = () => {
                           <Image
                             key={uuid}
                             src={slidesData[1].img}
-                            alt="Pool"
+                            alt="Roof"
                             className="w-auto h-auto object-cover"
                             fill
                             sizes="(max-width: 960px) 100vw"
@@ -333,7 +333,7 @@ const Gallery = () => {
                           <Image
                             key={uuid}
                             src={slidesData[2].img}
-                            alt="Pool"
+                            alt="Roof"
                             className="w-auto h-auto object-cover"
                             fill
                             sizes="(max-width: 960px) 100vw"
@@ -343,7 +343,7 @@ const Gallery = () => {
                           <Image
                             key={uuid}
                             src={slidesData[3].img}
-                            alt="Pool"
+                            alt="Roof"
                             className="w-auto h-auto object-cover"
                             fill
                             sizes="(max-width: 960px) 100vw"
@@ -353,7 +353,7 @@ const Gallery = () => {
                           <Image
                             key={uuid}
                             src={slidesData[4].img}
-                            alt="Pool"
+                            alt="Roof"
                             className="w-auto h-auto object-cover"
                             fill
                             sizes="(max-width: 960px) 100vw"
@@ -363,7 +363,7 @@ const Gallery = () => {
                           <Image
                             key={uuid}
                             src={slidesData[5].img}
-                            alt="Pool"
+                            alt="Roof"
                             className="w-auto h-auto object-cover"
                             fill
                             sizes="(max-width: 960px) 100vw"
@@ -373,7 +373,7 @@ const Gallery = () => {
                           <Image
                             key={uuid}
                             src={slidesData[6].img}
-                            alt="Pool"
+                            alt="Roof"
                             className="w-auto h-auto object-cover"
                             fill
                             sizes="(max-width: 960px) 100vw"
@@ -383,7 +383,7 @@ const Gallery = () => {
                           <Image
                             key={uuid}
                             src={slidesData[7].img}
-                            alt="Pool"
+                            alt="Roof"
                             className="w-auto h-auto object-cover"
                             fill
                             sizes="(max-width: 960px) 100vw"
@@ -393,7 +393,7 @@ const Gallery = () => {
                           <Image
                             key={uuid}
                             src={slidesData[8].img}
-                            alt="Pool"
+                            alt="Roof"
                             className="w-auto h-auto object-cover"
                             fill
                             sizes="(max-width: 960px) 100vw"
@@ -403,7 +403,7 @@ const Gallery = () => {
                           <Image
                             key={uuid}
                             src={slidesData[9].img}
-                            alt="Pool"
+                            alt="Roof"
                             className="w-auto h-auto object-cover"
                             fill
                             sizes="(max-width: 960px) 100vw"
@@ -413,7 +413,7 @@ const Gallery = () => {
                           <Image
                             key={uuid}
                             src={slidesData[1].img}
-                            alt="Pool"
+                            alt="Roof"
                             className="w-auto h-auto object-cover"
                             fill
                             sizes="(max-width: 960px) 100vw"
@@ -423,7 +423,7 @@ const Gallery = () => {
                           <Image
                             key={uuid}
                             src={slidesData[2].img}
-                            alt="Pool"
+                            alt="Roof"
                             className="w-auto h-auto object-cover"
                             fill
                             sizes="(max-width: 960px) 100vw"

@@ -11,7 +11,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import LineImage from '../public/images/hero-line.svg';
 
-const PoolMaintenance = () => {
+const RoofMaintenance = () => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -38,11 +38,11 @@ const PoolMaintenance = () => {
 
         <div data-aos="fade-left" className="w-full max-w-[532px]">
           <span className="text-left text-blue font-['Open Sans'] font-semibold uppercase text-[16px] leadeing-[167%] tracking-[.03em] mb-[8px]">
-            Održavanje bazena
+            Roof maintenance
           </span>
           <div className="mb-[13px]">
             <Headline
-              headline={'Lako i jednostavno čišćenje '}
+              headline={'Easy and simple cleaning'}
               textPosition={'left'}
             />
           </div>
@@ -65,11 +65,11 @@ const PoolMaintenance = () => {
         <div data-aos="zoom-out-up" className="mb-[70px] max-w-[500px] w-full">
           <Headline
             headline={[
-              'Izaberi ',
+              'Your ',
               <span key={Math.random()} className="text-blue">
-                Svoj Paket
+                Package
               </span>,
-              ' Za Održavanje',
+              ' of Maintenance',
             ]}
             key={1}
             color={'black'}
@@ -102,10 +102,10 @@ const PoolMaintenance = () => {
                 </p>
                 <div className="flex mb-[20px] flex-wrap items-center">
                   <p className="text-blue font-normal leading-[155%] text-[32px] sm:text-[48px] font-['Prata'] mr-[10px]">
-                    5000
+                    50
                   </p>
                   <p className="text-grey font-normal leading-[155%] text-[16px] font-['Open Sans']">
-                    KN / Mjesečno
+                    $ / Monthly
                   </p>
                 </div>
                 <button
@@ -115,7 +115,7 @@ const PoolMaintenance = () => {
                   type="button"
                   onClick={openModal}
                 >
-                  Izaberi
+                  Choose
                 </button>
               </div>
               <div className="px-[32px]">
@@ -184,10 +184,10 @@ const PoolMaintenance = () => {
                 </p>
                 <div className="flex mb-[20px] flex-wrap items-center">
                   <p className="text-blue font-normal leading-[155%] text-[32px] sm:text-[48px] font-['Prata'] mr-[10px]">
-                    16000
+                    160
                   </p>
                   <p className="text-white font-normal leading-[155%] text-[16px] opacity-70 font-['Open Sans']">
-                    KN / Mjesečno
+                    $ / Monthly
                   </p>
                 </div>
                 <button
@@ -197,7 +197,7 @@ const PoolMaintenance = () => {
                   type="button"
                   onClick={openModal}
                 >
-                  Izaberi
+                  Choose
                 </button>
               </div>
               <div className="flex flex-col px-[32px] py-[26px] text-gray font-normal leading-[155%] text-[16px] font-['Open Sans']">
@@ -501,4 +501,4 @@ const PoolMaintenance = () => {
   );
 };
 
-export default PoolMaintenance;
+export default RoofMaintenance;

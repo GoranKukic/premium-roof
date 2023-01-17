@@ -9,7 +9,7 @@ import MailIcon from '../public/images/mail.svg';
 
 const Footer = () => {
   return (
-    <div className="bg-white flex justify-center items-center flex flex-col">
+    <div className="bg-solid-white flex justify-center items-center flex flex-col">
       <div className="max-w-[1172px] w-full mx-auto my-[55px] px-4">
         <div className="mb-[15px]">
           <Logo />

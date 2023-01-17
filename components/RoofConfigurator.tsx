@@ -16,9 +16,9 @@ import DesignImg from '../public/images/design.jpg';
 import BuildImg from '../public/images/build.jpg';
 import RealizationImg from '../public/images/realization.jpg';
 
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 
-const PoolConfigurator = () => {
+const RoofConfigurator = () => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -40,11 +40,11 @@ const PoolConfigurator = () => {
           data-aos="fade-right"
           className="text-left text-blue font-['Open Sans'] font-semibold uppercase text-[16px] leadeing-[167%] tracking-[.03em] mb-[8px]"
         >
-          KONFIGURATOR BAZENA
+          roof configurator
         </span>
         <div data-aos="fade-right" className="mb-[13px]">
           <Headline
-            headline={'Od Ideje Do Konačnog Proizvoda'}
+            headline={'From Idea To Final Product'}
             textPosition={'left'}
           />
         </div>
@@ -64,7 +64,7 @@ const PoolConfigurator = () => {
               {/* Idea */}
               <Accordion
                 index={0}
-                heading="Ideja"
+                heading="Idea"
                 accordion={activeAcc}
                 setAccordion={setActiveAcc}
                 iconUrl={BulbIcon}
@@ -74,7 +74,7 @@ const PoolConfigurator = () => {
               {/* Design */}
               <Accordion
                 index={1}
-                heading="Dizajn"
+                heading="Design"
                 accordion={activeAcc}
                 setAccordion={setActiveAcc}
                 iconUrl={PenIcon}
@@ -84,7 +84,7 @@ const PoolConfigurator = () => {
               {/* Build */}
               <Accordion
                 index={2}
-                heading="Kreiranje"
+                heading="Build"
                 accordion={activeAcc}
                 setAccordion={setActiveAcc}
                 iconUrl={BuildIcon}
@@ -94,7 +94,7 @@ const PoolConfigurator = () => {
               {/* Realization */}
               <Accordion
                 index={3}
-                heading="Realizacija"
+                heading="Realization"
                 accordion={activeAcc}
                 setAccordion={setActiveAcc}
                 iconUrl={RealizationIcon}
@@ -118,7 +118,7 @@ const PoolConfigurator = () => {
               <div className="absolute right-[20px] bottom-[20px]">
                 <Link
                   href="#"
-                  to="create-own-pool"
+                  to="create-own-roof"
                   activeClass="active"
                   smooth={true}
                   offset={-80}
@@ -134,4 +134,4 @@ const PoolConfigurator = () => {
     </div>
   );
 };
-export default PoolConfigurator;
+export default RoofConfigurator;

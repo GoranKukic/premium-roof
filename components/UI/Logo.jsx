@@ -7,6 +7,7 @@ const Logo = () => {
       <Image
         src={LogoImg}
         alt="Logo"
+        sizes="(max-width: 768px) 50vw, 100vw"
         fill
         className="object-contain ovbject-left w-full h-full"
       />
