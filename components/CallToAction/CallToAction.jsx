@@ -32,7 +32,7 @@ const CallToAction = () => {
       className="h-[500px] relative bg-cta-gradient bg-no-repeat bg-cover bg-center flex justify-center items-center px-4"
     >
       <div className="absolute left-0 bottom-0 right-0 w-full h-[428px] -z-10 ">
-        <div className="relative">
+        <div className="relative w-full h-full">
           <Image
             src={CtaBg}
             alt="Cta backgorund"

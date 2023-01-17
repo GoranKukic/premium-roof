@@ -4,11 +4,10 @@ This is "Premium Roof" web page.
 
 ## The brief
 
-- Build web page by given design,
-- Use React and Next.js,
-- Style it with Tailwind,
-- Web page should be fully responsive down to 260px of viewport width,
-- Using TypeScript would be nice,
+- Used React and Next.js,
+- Styled with Tailwind CSS,
+- Web page should is fully responsive down to 250px of viewport width,
+- Used TypeScript in some componentse,
 
 ## Development requirements
 

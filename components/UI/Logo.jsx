@@ -9,7 +9,7 @@ const Logo = () => {
         alt="Logo"
         sizes="(max-width: 768px) 50vw, 100vw"
         fill
-        className="object-contain ovbject-left w-full h-full"
+        className="object-contain ovbject-left w-auto h-auto"
       />
     </div>
   );
