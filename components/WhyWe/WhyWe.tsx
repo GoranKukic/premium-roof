@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
-import Headline from './UI/Headline';
+import Headline from '../UI/Headline';
 import Image from 'next/image';
-import Paragraph from './UI/Paragraph';
-import PenIcon from '../public/images/pen.svg';
-import StarIcon from '../public/images/star.svg';
-import PoolIcon from '../public/images/bulb.svg';
+import Paragraph from '../UI/Paragraph';
+import PenIcon from '../../public/images/pen.svg';
+import StarIcon from '../../public/images/star.svg';
+import BulbIcon from '../../public/images/bulb.svg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -85,8 +85,8 @@ const WhyWe = () => {
         <div data-aos="fade-left">
           <div className="max-w-[360px] px-[34px] pt-[60px] pb-[55px] bg-white border-t border-solid border-black flex flex-col gap-[33px] items-center justify-center text-center cursor-pointer overflow-hidden transform hover:-translate-y-4 duration-500 ease-in-out">
             <Image
-              src={PoolIcon}
-              alt="Pool icon"
+              src={BulbIcon}
+              alt="Bulb icon"
               className="h-[40px] w-[40px]"
             />
             <span className='text-[20px] md:text-[24px]  font-normal text-gray font-["Prata"] leadeing-[155%] text-black max-w-[230px] md:max-w-[250px]'>

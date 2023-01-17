@@ -1,13 +1,15 @@
 import { useEffect, useState, Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import Headline from './UI/Headline';
-import HeadlineUnderline from './UI/HeadlineUnderline';
+import Headline from '../UI/Headline';
+import HeadlineUnderline from '../UI/HeadlineUnderline';
 // import CtaButton from './UI/CtaButton';
 // import { Link } from 'react-scroll/modules';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Image from 'next/image';
-import LineImage from '../public/images/hero-line.svg';
+import LineImage from '../../public/images/hero-line.svg';
+import styles from './CallToAction.module.css';
+import CtaBg from '../../public/images/ctaBg.jpg';
 
 const CallToAction = () => {
   useEffect(() => {
@@ -29,7 +31,19 @@ const CallToAction = () => {
       id="create-own-roof"
       className="h-[500px] relative bg-cta-gradient bg-no-repeat bg-cover bg-center flex justify-center items-center px-4"
     >
-      <div className="absolute bg-cta-bg left-0 bottom-0 right-0 w-full h-[428px] bg-cover bg-center -z-10 "></div>
+      <div className="absolute left-0 bottom-0 right-0 w-full h-[428px] -z-10 ">
+        <div className="relative">
+          <Image
+            src={CtaBg}
+            alt="Cta backgorund"
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover oject-center w-auto h-auto overflow-hidden"
+            placeholder="blur"
+            blurDataURL={'../public/images/ctaBg.jpg'}
+          />
+        </div>
+      </div>
       <div
         data-aos="fade-up"
         data-aos-anchor-placement="center-bottom"
@@ -105,7 +119,7 @@ const CallToAction = () => {
                         viewBox="0 0 31 31"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="cursor-pointer"
+                        className={`${styles.closeButton} cursor-pointer`}
                         onClick={closeModal}
                       >
                         <path
@@ -118,7 +132,7 @@ const CallToAction = () => {
                         />
                       </svg>
                     </div>
-                    <form action="/contact-for-build-pool" method="dialog">
+                    <form action="/contact-for-build-roof" method="dialog">
                       {/* method="post" */}
                       <ul>
                         <li className="mb-[22px]">
@@ -126,7 +140,7 @@ const CallToAction = () => {
                             className='border border-gray w-full p-[22px] leading-tight focus:outline-none focus:shadow-outline"'
                             id="name"
                             type="text"
-                            placeholder="Ime"
+                            placeholder="Name"
                           />
                         </li>
                         <li className="mb-[22px]">
@@ -134,7 +148,7 @@ const CallToAction = () => {
                             className='border border-gray w-full p-[22px] leading-tight focus:outline-none focus:shadow-outline"'
                             id="surname"
                             type="text"
-                            placeholder="Prezime"
+                            placeholder="Surname"
                           />
                         </li>
                         <li className="mb-[22px]">
@@ -143,7 +157,7 @@ const CallToAction = () => {
                             type="email"
                             id="mail"
                             name="email"
-                            placeholder="Email Adresa"
+                            placeholder="Email"
                           />
                         </li>
                         <li className="mb-[22px]">
@@ -152,100 +166,100 @@ const CallToAction = () => {
                             type="text"
                             id="adress"
                             name="adress"
-                            placeholder="Adresa Stanovanja"
+                            placeholder="Adress"
                           />
                         </li>
                         <li className="flex flex-col mb-[20px]">
                           <label
                             className="text-solid-black font-['Open Sans'] font-semibold text-[16px] leadeing-[167%] text-left pb-[12px]"
-                            htmlFor="pool'type"
+                            htmlFor="roof'type"
                           >
-                            Tip bazena koji želite:
+                            Roof type you would like:
                           </label>
                           <span className="flex flex-col md:flex-row gap-[17px]">
                             <span className=" flex">
                               <span className="flex items-center">
                                 <input
                                   defaultChecked
-                                  id="concrete"
+                                  id="gable"
                                   type="radio"
-                                  value="concrete"
-                                  name="pool-type"
+                                  value="gable"
+                                  name="roof-type"
                                   className="w-[29px] h-[29px] text-blue bg-gray border-gray"
                                 />
                                 <label
-                                  htmlFor="concrete"
+                                  htmlFor="gable"
                                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                                 >
-                                  Betonski
+                                  Gable
                                 </label>
                               </span>
                             </span>
                             <span className=" flex">
                               <span className="flex items-center">
                                 <input
-                                  id="overflowing"
+                                  id="dutch-gable"
                                   type="radio"
-                                  value="overflowing"
-                                  name="pool-type"
+                                  value="dutch-gable"
+                                  name="roof-type"
                                   className="w-[29px] h-[29px] text-blue bg-gray border-gray"
                                 />
                                 <label
-                                  htmlFor="overflowing"
+                                  htmlFor="dutch-gable"
                                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                                 >
-                                  Prelivni
+                                  Dutch Gable
                                 </label>
                               </span>
                             </span>
                             <span className=" flex">
                               <span className="flex items-center flex-row">
                                 <input
-                                  id="poliester"
+                                  id="flat"
                                   type="radio"
-                                  value="poliester"
-                                  name="pool-type"
+                                  value="flat"
+                                  name="roof-type"
                                   className="w-[29px] h-[29px] text-blue bg-gray border-gray"
                                 />
                                 <label
-                                  htmlFor="poliester"
+                                  htmlFor="flat"
                                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                                 >
-                                  Poliesterski
+                                  Flat Roof
                                 </label>
                               </span>
                             </span>
                             <span className=" flex">
                               <span className="flex items-center">
                                 <input
-                                  id="skimmer"
+                                  id="gambrel"
                                   type="radio"
-                                  value="skimmer"
-                                  name="pool-type"
+                                  value="gambrel"
+                                  name="roof-type"
                                   className="w-[29px] h-[29px] text-blue bg-gray border-gray"
                                 />
                                 <label
-                                  htmlFor="skimmer"
+                                  htmlFor="gambrel"
                                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                                 >
-                                  Skimerski
+                                  Gambrel
                                 </label>
                               </span>
                             </span>
                             <span className=" flex">
                               <span className="flex items-center">
                                 <input
-                                  id="biological"
+                                  id="mansard"
                                   type="radio"
-                                  value="biological"
-                                  name="pool-type"
+                                  value="mansard"
+                                  name="roof-type"
                                   className="w-[29px] h-[29px] text-blue bg-gray border-gray"
                                 />
                                 <label
-                                  htmlFor="biological"
+                                  htmlFor="mansard"
                                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                                 >
-                                  Biološki
+                                  Mansard
                                 </label>
                               </span>
                             </span>
@@ -254,60 +268,60 @@ const CallToAction = () => {
                         <li className="flex flex-col mb-[40px]">
                           <label
                             className="text-solid-black font-['Open Sans'] font-semibold text-[16px] leadeing-[167%] text-left pb-[12px]"
-                            htmlFor="pool'type"
+                            htmlFor="roofing-tiles"
                           >
-                            Zastakljivanje i pokrivanje bazena:
+                            Roofing Tiles:
                           </label>
                           <span className="flex flex-col md:flex-row gap-[17px]">
                             <span className=" flex">
                               <span className="flex items-center">
                                 <input
                                   defaultChecked
-                                  id="glass-and-roof"
+                                  id="clay-roof-tiles"
                                   type="radio"
-                                  value="glass-and-roof"
+                                  value="clay-roof-tiles"
                                   name="cover"
                                   className="w-[29px] h-[29px] text-blue bg-gray border-gray"
                                 />
                                 <label
-                                  htmlFor="glass-and-roof"
+                                  htmlFor="clay-roof-tiles"
                                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                                 >
-                                  Zastakljivanje i pokrivanje
+                                  Clay Roof Tiles
                                 </label>
                               </span>
                             </span>
                             <span className=" flex">
                               <span className="flex items-center">
                                 <input
-                                  id="roof"
+                                  id="concrete-tiles"
                                   type="radio"
-                                  value="roof"
+                                  value="concrete-tiles"
                                   name="cover"
                                   className="w-[29px] h-[29px] text-blue bg-gray border-gray"
                                 />
                                 <label
-                                  htmlFor="roof"
+                                  htmlFor="concrete-tiles"
                                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                                 >
-                                  Samo pokrivanje
+                                  Concrete Tiles
                                 </label>
                               </span>
                             </span>
                             <span className=" flex">
                               <span className="flex items-center">
                                 <input
-                                  id="no-cover"
+                                  id="slate-tiles"
                                   type="radio"
                                   value="no-cover"
-                                  name="roof"
+                                  name="slate-tiles"
                                   className="w-[29px] h-[29px] text-blue bg-gray border-gray"
                                 />
                                 <label
-                                  htmlFor="no-cover"
+                                  htmlFor="slate-tiles"
                                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                                 >
-                                  Ništa od navedenog
+                                  Slate Tiles
                                 </label>
                               </span>
                             </span>
@@ -321,7 +335,7 @@ const CallToAction = () => {
                             type="submit"
                             value="Submit"
                           >
-                            Pošalji
+                            Send
                           </button>
                         </li>
                       </ul>

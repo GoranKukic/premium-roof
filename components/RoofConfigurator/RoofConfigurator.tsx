@@ -2,19 +2,19 @@ import { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Image, { StaticImageData } from 'next/image';
-import Paragraph from './UI/Paragraph';
-import Headline from './UI/Headline';
-import Accordion from './UI/Accordion';
-import IdeaImg from '../public/images/idea.jpg';
-import CtaButton from './UI/CtaButton';
+import Paragraph from '../UI/Paragraph';
+import Headline from '../UI/Headline';
+import Accordion from '../UI/Accordion';
+import IdeaImg from '../../public/images/idea.jpg';
+import CtaButton from '../UI/CtaButton';
 import { Link } from 'react-scroll/modules';
-import BulbIcon from '../public/images/bulb.svg';
-import PenIcon from '../public/images/pen.svg';
-import BuildIcon from '../public/images/build.svg';
-import RealizationIcon from '../public/images/realization.svg';
-import DesignImg from '../public/images/design.jpg';
-import BuildImg from '../public/images/build.jpg';
-import RealizationImg from '../public/images/realization.jpg';
+import BulbIcon from '../../public/images/bulb.svg';
+import PenIcon from '../../public/images/pen.svg';
+import BuildIcon from '../../public/images/build.svg';
+import RealizationIcon from '../../public/images/realization.svg';
+import DesignImg from '../../public/images/design.jpg';
+import BuildImg from '../../public/images/build.jpg';
+import RealizationImg from '../../public/images/realization.jpg';
 
 // import { v4 as uuidv4 } from 'uuid';
 
@@ -32,7 +32,7 @@ const RoofConfigurator = () => {
 
   return (
     <div
-      id="pool-configurator"
+      id="roof-configurator"
       className="bg-white flex justify-center items-center px-4"
     >
       <div className="lg:max-w-[1140px] max-w-[532px] w-full bg-white mx-auto my-[110px] flex flex-col">
@@ -110,10 +110,11 @@ const RoofConfigurator = () => {
             >
               <Image
                 src={img}
-                alt="Pool"
+                alt="Roof"
                 height={520}
                 width={800}
                 className="object-cover"
+                placeholder="blur"
               />
               <div className="absolute right-[20px] bottom-[20px]">
                 <Link

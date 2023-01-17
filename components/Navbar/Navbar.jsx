@@ -3,18 +3,18 @@ import { useState } from 'react';
 import { Link } from 'react-scroll/modules';
 // import Image from 'next/image';
 // import ChevronDown from '../public/images/ChevronDown.svg';
-import CtaButton from './UI/CtaButton';
-import Logo from './UI/Logo';
-import NavLinks from './UI/NavLinks';
-import NavLinksMobile from './UI/NavLinksMobile';
+import CtaButton from '../UI/CtaButton';
+import Logo from '../UI/Logo';
+import NavLinks from '../UI/NavLinks';
+import NavLinksMobile from '../UI/NavLinksMobile';
 
 const navLinksArray = [
   {
-    to: 'pool-configurator',
+    to: 'roof-configurator',
     title: 'Roof Configurator',
   },
   {
-    to: 'pool-maintenance',
+    to: 'roof-maintenance',
     title: 'Roof Maintainance',
   },
   {

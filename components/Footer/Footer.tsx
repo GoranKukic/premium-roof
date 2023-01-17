@@ -1,11 +1,11 @@
-import Logo from './UI/Logo';
-import Paragraph from './UI/Paragraph';
-import FooterLink from './UI/FooterLink';
+import Logo from '../UI/Logo';
+import Paragraph from '../UI/Paragraph';
+import FooterLink from '../UI/FooterLink';
 import Image from 'next/image';
-import LocationIcon from '../public/images/location.svg';
-import InstaIcon from '../public/images/instagram.svg';
-import PhoneIcon from '../public/images/phone.svg';
-import MailIcon from '../public/images/mail.svg';
+import LocationIcon from '../../public/images/location.svg';
+import InstaIcon from '../../public/images/instagram.svg';
+import PhoneIcon from '../../public/images/phone.svg';
+import MailIcon from '../../public/images/mail.svg';
 
 const Footer = () => {
   return (
@@ -34,14 +34,12 @@ const Footer = () => {
               />
 
               <a
-                href={
-                  'https://www.google.com/maps/place/Zagreba%C4%8Dka+cesta+22,+10000,+Zagreb,+Croatia'
-                }
+                href={'https://goo.gl/maps/tjdbWfNDuWFekB37A'}
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-blue hover:duration-500"
               >
-                Zagrebačka 22, Zagreb
+                2 Adams St, Lakeside, Montana
               </a>
             </div>
           </div>
@@ -50,24 +48,24 @@ const Footer = () => {
               <ul className=" flex flex-col gap-[15px] md:gap-[25px] text-[16px] font-normal text-gray font-['Open Sans'] leadeing-[155%]">
                 <li>
                   <FooterLink
-                    text={'Konfigurator Bazena'}
-                    to={'pool-configurator'}
+                    text={'Roof Configurator'}
+                    to={'roof-configurator'}
                   />
                 </li>
                 <li>
                   <FooterLink
-                    text={'Održavanje Bazena'}
-                    to={'pool-maintenance'}
+                    text={'Roof Maintainance'}
+                    to={'roof-maintenance'}
                   />
                 </li>
                 <li>
-                  <FooterLink text={'O nama'} to={'about-us'} />
+                  <FooterLink text={'About Us'} to={'about-us'} />
                 </li>
                 <li>
-                  <FooterLink text={'Zašto Mi?'} to={'why-we'} />
+                  <FooterLink text={'Why We?'} to={'why-we'} />
                 </li>
                 <li>
-                  <FooterLink text={'Galerija'} to={'gallery'} />
+                  <FooterLink text={'Gallery'} to={'gallery'} />
                 </li>
               </ul>
             </div>
@@ -80,7 +78,7 @@ const Footer = () => {
                   alt="Email"
                   className="w-[16px] h-[16px] my-auto"
                 />
-                <a href="mailto:premiumspa@gmail.com">premiumspa@gmail.com</a>
+                <a href="mailto:example@mail.com">example@mail.com</a>
               </li>
               <li className="flex gap-[7px] hover:text-blue hover:duration-500 cursor-pointer">
                 <Image
@@ -97,12 +95,12 @@ const Footer = () => {
                   className="w-[16px] h-[16px] my-auto"
                 />
                 <a
-                  href="https://www.instagram.com/premiumspabazeni"
+                  href="https://www.instagram.com/"
                   target="_blank"
                   rel="noreferrer"
                   className="cursor-pointer hover:text-blue hover:duration-500 overflow-hidden"
                 >
-                  @premiumspabazeni
+                  @premiumroof
                 </a>
               </li>
             </ul>
@@ -113,16 +111,8 @@ const Footer = () => {
         <div className="flex flex-col flex-col-reverse items-center md:flex-row  md:flex-nowrap justify-between text-[14px] font-normal text-gray font-['Open Sans'] leadeing-[155%]">
           <div>
             <p className="text-center">
-              Premium Spa {new Date().getFullYear()} <wbr /> &copy; All rights
-              reserved |<wbr /> Designed By{' '}
-              <a
-                href={'https://www.blueduck.at/'}
-                target="_blank"
-                rel="noreferrer"
-                className="text-[#0000FF] underline hover:no-underline"
-              >
-                BlueDuck
-              </a>
+              Premium Roof {new Date().getFullYear()} <wbr /> &copy; | All
+              rights reserved
             </p>
           </div>
           <div>

@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import Headline from './UI/Headline';
-import Paragraph from './UI/Paragraph';
-import CtaButton from './UI/CtaButton';
-import HeadlineUnderline from './UI/HeadlineUnderline';
+import Headline from '../UI/Headline';
+import Paragraph from '../UI/Paragraph';
+import CtaButton from '../UI/CtaButton';
+import HeadlineUnderline from '../UI/HeadlineUnderline';
 import { Link } from 'react-scroll/modules';
 import AOS from 'aos';
 import 'aos/dist/aos.css';

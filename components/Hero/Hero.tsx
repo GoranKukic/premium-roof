@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
-import CtaButton from './UI/CtaButton';
+import CtaButton from '../UI/CtaButton';
 import { Link } from 'react-scroll/modules';
 import Image from 'next/image';
-import HeadlineUnderline from './UI/HeadlineUnderline';
-import Badge from '../public/images/hero-badge.png';
+import HeadlineUnderline from '../UI/HeadlineUnderline';
+import Badge from '../../public/images/hero-badge.png';
+import UpperBg from '../../public/images/heroUpperBg.webp';
+import LowerBg from '../../public/images/heroLowerBg.jpg';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -14,8 +16,16 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="h-[100vh] flex flex-col relative overflow-hidden">
-      <div className="absolute w-[552px] h-[473px] top-[0px] left-[0px] bg-cover bg-heroBg1 -z-50 overflow-hidden"></div>
+    <div className="h-[100vh] flex flex-col relative overflow-hidden relative">
+      <Image
+        src={UpperBg}
+        alt="Hero backgorund"
+        fill
+        sizes="(min-width: 768px) 50vw, 50vw"
+        className="object-center max-w-[552px] max-h-[473px] w-auto h-auto absolute  top-[0px] left-[0px] -z-50 overflow-hidden"
+        placeholder="blur"
+        blurDataURL={'../public/images/heroUpperBg.webp'}
+      />
       <div className=" w-full md:h-[473px] relative bg-transparent">
         <div
           data-aos="fade-down"
@@ -52,10 +62,16 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div
-        className="h-auto md:min-h-[500px] h-full bg-hero-bg-2 bg-cover bg-center flex-end relative flex 
-      items-end"
-      >
+      <div className="h-auto md:min-h-[500px] h-full flex-end relative flex items-end">
+        <Image
+          src={LowerBg}
+          alt="Hero backgorund"
+          fill
+          sizes="(min-width: 768px) 100vw, 50vw"
+          className="object-cover object-center w-auto h-auto absolute  top-[0px] left-[0px] -z-50 overflow-hidden"
+          placeholder="blur"
+          blurDataURL={'../public/images/heroLowerBg.jpg'}
+        />
         <div
           className="absolute left-[12%] top-[-88px]"
           data-aos="flip-left"

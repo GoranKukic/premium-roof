@@ -1,15 +1,15 @@
 import { useEffect, useState, Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import Headline from './UI/Headline';
-import Paragraph from './UI/Paragraph';
+import Headline from '../UI/Headline';
+import Paragraph from '../UI/Paragraph';
 import Image from 'next/image';
-import SparkleIcon from '../public/images/sparkle.svg';
-import CheckIcon from '../public/images/check.svg';
-import ScalesIcon from '../public/images/scales.svg';
-import BeforeAndAfterSlider from './UI/BeforeAndAfterSlider';
+import SparkleIcon from '../../public/images/sparkle.svg';
+import CheckIcon from '../../public/images/check.svg';
+import ScalesIcon from '../../public/images/scales.svg';
+import BeforeAndAfterSlider from '../UI/BeforeAndAfterSlider';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import LineImage from '../public/images/hero-line.svg';
+import LineImage from '../../public/images/hero-line.svg';
 
 const RoofMaintenance = () => {
   useEffect(() => {
@@ -28,7 +28,7 @@ const RoofMaintenance = () => {
 
   return (
     <div
-      id="pool-maintenance"
+      id="roof-maintenance"
       className="bg-white flex flex-col justify-center items-center pt-[110px] px-4 pb-[110px]"
     >
       <div className="max-w-[1140px] flex justify-center items-center gap-[50px] mb-[132px] lg:flex-nowrap flex-wrap-reverse">
@@ -355,7 +355,7 @@ const RoofMaintenance = () => {
                           <li className="flex flex-col mb-[20px]">
                             <label
                               className="text-solid-black font-['Open Sans'] font-semibold text-[16px] leadeing-[167%] text-left pb-[12px]"
-                              htmlFor="pool'type"
+                              htmlFor="roof'type"
                             >
                               Vaš tip bazena
                             </label>
@@ -367,7 +367,7 @@ const RoofMaintenance = () => {
                                     id="skimmer"
                                     type="radio"
                                     value="skimmer"
-                                    name="pool-type"
+                                    name="roof-type"
                                     className="w-[29px] h-[29px] text-blue bg-gray border-gray"
                                   />
                                   <label
@@ -384,7 +384,7 @@ const RoofMaintenance = () => {
                                     id="overflowing"
                                     type="radio"
                                     value="overflowing"
-                                    name="pool-type"
+                                    name="roof-type"
                                     className="w-[29px] h-[29px] text-blue bg-gray border-gray"
                                   />
                                   <label
@@ -401,7 +401,7 @@ const RoofMaintenance = () => {
                                     id="infinity"
                                     type="radio"
                                     value="infinity"
-                                    name="pool-type"
+                                    name="roof-type"
                                     className="w-[29px] h-[29px] text-blue bg-gray border-gray"
                                   />
                                   <label
@@ -417,7 +417,7 @@ const RoofMaintenance = () => {
                           <li className="flex flex-col mb-[40px]">
                             <label
                               className="text-solid-black font-['Open Sans'] font-semibold text-[16px] leadeing-[167%] text-left pb-[12px]"
-                              htmlFor="pool'type"
+                              htmlFor="roof'type"
                             >
                               Dosadašnji tretman vode:
                             </label>
