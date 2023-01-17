@@ -21,8 +21,8 @@ const Hero = () => {
         src={UpperBg}
         alt="Hero backgorund"
         fill
-        sizes="(min-width: 768px) 50vw, 50vw"
-        className="object-center max-w-[552px] max-h-[473px] w-auto h-auto absolute  top-[0px] left-[0px] -z-50 overflow-hidden"
+        // sizes="(min-width: 768px) 30vw, 100vw"
+        className="object-contain object-top object-left max-w-[552px] max-h-[473px] w-auto h-auto absolute -z-50 overflow-hidden"
         placeholder="blur"
         blurDataURL={'../public/images/heroUpperBg.webp'}
       />
