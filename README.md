@@ -13,6 +13,15 @@ This is "Premium Roof" web page.
 
 - [Node.js](http://nodejs.org/)
 
+## Live preview
+
+[See live here](https://premium-roof.vercel.app/)
+
+## Optimization & Performance
+
+![Screnshoot](/public/images/screenshot.jpg)
+
+
 ## Getting Started
 
 FTo install dependencies run:
