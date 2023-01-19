@@ -20,7 +20,7 @@
     "**/*.ts",
     "**/*.tsx",
     "components/RoofMaintenance/RoofMaintenance.tsx",
-    "components/UI/BeforeAndAfterSlider.tsx",
+    "components/UI/BeforeAndAfterSlider.jsx",
     "components/RoofConfigurator.jsx",
     "components/UI/CtaButton.tsx",
     "components/Navbar/Navbar.tsx",

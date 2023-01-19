@@ -13,7 +13,6 @@ import LineImage from '../../public/images/hero-line.svg';
 import MaintenanceBg1 from '../../public/images/maintainBg1.png';
 import styles from './RoofMaintenance.module.css';
 
-
 const RoofMaintenance = () => {
   useEffect(() => {
     AOS.init();
