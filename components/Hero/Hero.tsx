@@ -62,7 +62,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="h-auto md:min-h-[500px] h-full flex-end relative flex items-end">
+      <div className="md:min-h-[50%] h-full flex-end relative flex items-end">
         <Image
           src={LowerBg}
           alt="Hero backgorund"

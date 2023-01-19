@@ -1,0 +1,7 @@
+.maintainBg1 {
+  inset: unset !important;
+}
+
+.maintainBg1 {
+  @apply -rotate-[30] -right-[225px] -top-[120px] !important;
+}

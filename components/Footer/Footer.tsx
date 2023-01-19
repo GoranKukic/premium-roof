@@ -6,10 +6,21 @@ import LocationIcon from '../../public/images/location.svg';
 import InstaIcon from '../../public/images/instagram.svg';
 import PhoneIcon from '../../public/images/phone.svg';
 import MailIcon from '../../public/images/mail.svg';
+import styles from './Footer.module.css';
+import FooterBg from '../../public/images/footerBg.png';
 
 const Footer = () => {
   return (
-    <div className="bg-solid-white flex justify-center items-center flex flex-col">
+    <div className="relative bg-solid-white flex justify-center items-center flex flex-col">
+      <Image
+        src={FooterBg}
+        alt="Hero backgorund"
+        fill
+        // sizes="(min-width: 768px) 30vw, 100vw"
+        className={`${styles.footerBg} object-contain absolute z-10 max-w-[950px] max-h-[932px] w-auto h-auto opacity-30`}
+        placeholder="blur"
+        blurDataURL={'../public/images/maintainBg1'}
+      />
       <div className="max-w-[1172px] w-full mx-auto my-[55px] px-4">
         <div className="mb-[15px]">
           <Logo />

@@ -45,7 +45,7 @@ const MobileNav = ({ open, setOpen }) => {
         {navLinksArray.map((linkName) => (
           <NavLinksMobile
             to={linkName.to}
-            key={linkName + Math.random()}
+            key={Math.random()}
             onClick={() => {
               setOpen(!open);
             }}
@@ -105,7 +105,7 @@ const Navbar = () => {
         </div>
         <div className="hidden lg:flex w-[540px] justify-between items-center">
           {navLinksArray.map((linkName) => (
-            <NavLinks to={linkName.to} key={linkName + Math.random()}>
+            <NavLinks to={linkName.to} key={Math.random()}>
               <p className="relative group cursor-pointer">
                 <span>{linkName.title}</span>
                 <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-blue transition-all group-hover:w-full"></span>

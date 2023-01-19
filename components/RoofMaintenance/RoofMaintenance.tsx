@@ -10,6 +10,9 @@ import BeforeAndAfterSlider from '../UI/BeforeAndAfterSlider';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import LineImage from '../../public/images/hero-line.svg';
+import MaintenanceBg1 from '../../public/images/maintainBg1.png';
+import styles from './RoofMaintenance.module.css';
+
 
 const RoofMaintenance = () => {
   useEffect(() => {
@@ -29,9 +32,18 @@ const RoofMaintenance = () => {
   return (
     <div
       id="roof-maintenance"
-      className="bg-white flex flex-col justify-center items-center pt-[110px] px-4 pb-[110px]"
+      className="relative bg-solid-white flex flex-col justify-center items-center pt-[110px] px-4 pb-[110px] overflow-hidden"
     >
-      <div className="max-w-[1140px] flex justify-center items-center gap-[50px] mb-[132px] lg:flex-nowrap flex-wrap-reverse">
+      <Image
+        src={MaintenanceBg1}
+        alt="Hero backgorund"
+        fill
+        // sizes="(min-width: 768px) 30vw, 100vw"
+        className={`${styles.maintainBg1} object-contain absolute z-10 max-w-[950px] max-h-[932px] w-auto h-auto opacity-30`}
+        placeholder="blur"
+        blurDataURL={'../public/images/maintainBg1'}
+      />
+      <div className="max-w-[1140px] flex justify-center items-center gap-[50px] mb-[132px] lg:flex-nowrap flex-wrap-reverse z-20">
         <div data-aos="fade-right">
           <BeforeAndAfterSlider />
         </div>
@@ -50,6 +62,7 @@ const RoofMaintenance = () => {
             <Paragraph
               paragraph={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium nulla metus, quis potenti vitae. Dolor eget suspendisse vulputate feugiat. Sagittis at tincidunt tristique ut. Consectetur ultrices aliquam amet a egestas. Hac elit ornare rhoncus arcu, vel vitae felis.`}
               textPosition={'left'}
+              color={''}
             />
             <br />
             <Paragraph
@@ -57,11 +70,12 @@ const RoofMaintenance = () => {
                 'Elementum in nunc, tortor, feugiat eget viverra sollicitudin facilisi. Aliquam, vel, consequat magnis augue. Sit lacinia ornare auctor massa urna, mattis blandit quis. '
               }
               textPosition={'left'}
+              color={''}
             />
           </div>
         </div>
       </div>
-      <div className="max-w-[1140px] flex flex-col justify-center items-center">
+      <div className="max-w-[1140px] flex flex-col justify-center items-center z-20">
         <div data-aos="zoom-out-up" className="mb-[70px] max-w-[500px] w-full">
           <Headline
             headline={[

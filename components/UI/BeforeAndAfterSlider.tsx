@@ -72,6 +72,7 @@ const BeforeAndAfterSlider = () => {
       <ReactBeforeSliderComponent
         firstImage={FIRST_IMAGE}
         secondImage={SECOND_IMAGE}
+        delimiterColor={'#F8FAFB'}
         delimiterIconStyles={delimiterIconStyles}
       />
       <div className="absolute bottom-[-35px] left-0 flex gap-[6px] flex items-center">

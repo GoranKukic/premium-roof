@@ -51,8 +51,6 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        heroBg1: "url('/images/hero-bg1.webp')",
-        'hero-bg-2': "url('/images/herobg2a.jpg')",
         'about-us-bg': "url('/images/aboutbg.jpg')",
         'cta-gradient':
           'linear-gradient(180deg, rgba(22, 22, 22, 1), rgba(22, 22, 22, 1), rgba(22, 22, 22, 0.5), rgba(22, 22, 22, 0.2), rgba(22, 22, 22, 0) 100%)',
