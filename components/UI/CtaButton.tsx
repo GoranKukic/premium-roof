@@ -8,7 +8,7 @@ const CtaButton = () => {
       transition-colors duration-700 transform hover:bg-white hover:text-black active:bg-gray"
       type="button"
     >
-      Make Order
+      Contact Us
     </button>
   );
 };

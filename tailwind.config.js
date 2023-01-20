@@ -18,6 +18,7 @@ module.exports = {
       brown: '#B0793F',
       white: '#FFFFFF',
       'solid-white': '#F8FAFB',
+      grayBackground: '#F6F6F6',
     },
 
     screens: {

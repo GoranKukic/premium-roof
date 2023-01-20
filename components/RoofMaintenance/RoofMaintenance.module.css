@@ -5,3 +5,11 @@
 .maintainBg1 {
   @apply -rotate-[30] -right-[225px] -top-[120px] !important;
 }
+
+.closeButton path {
+  @apply transition duration-500 ease-in-out;
+}
+
+.closeButton:hover path {
+  @apply fill-[#1A8CCC];
+}

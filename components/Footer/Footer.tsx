@@ -7,11 +7,11 @@ import InstaIcon from '../../public/images/instagram.svg';
 import PhoneIcon from '../../public/images/phone.svg';
 import MailIcon from '../../public/images/mail.svg';
 import styles from './Footer.module.css';
-import FooterBg from '../../public/images/footerBg.png';
+import FooterBg from '../../public/images/lines32.png';
 
 const Footer = () => {
   return (
-    <div className="relative bg-solid-white flex justify-center items-center flex flex-col">
+    <div className="relative bg-grayBackground flex justify-center items-center flex flex-col">
       <Image
         src={FooterBg}
         alt="Hero backgorund"
