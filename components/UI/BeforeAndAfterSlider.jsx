@@ -36,7 +36,7 @@ const BeforeAndAfterSlider = () => {
 
   return (
     <div className="max-w-[557px] w-full max-h-[557px] h-full relative">
-      <div className="absolute right-[-1px] top-[-1px] z-10">
+      <div className="absolute right-[-1px] top-[-2px] z-10">
         <svg
           width="67"
           height="63"

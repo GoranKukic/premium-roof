@@ -16,7 +16,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="h-[100vh] flex flex-col relative overflow-hidden relative">
+    <div
+      id="hero"
+      className="h-[100vh] flex flex-col relative overflow-hidden relative"
+    >
       <Image
         src={UpperBg}
         alt="Hero backgorund"
@@ -26,12 +29,13 @@ const Hero = () => {
         placeholder="blur"
         blurDataURL={'../public/images/heroUpperBg.webp'}
       />
-      <div className=" w-full md:h-[473px] relative bg-transparent">
+      <div className="h-[75%] xs:h-[65%]  ms:h-[50%] relative w-full bg-transparent flex justify-center">
         <div
           data-aos="fade-down"
           data-aos-duration="500"
           data-aos-easing="ease-in-out"
-          className="max-w-[700px] mx-auto  mt-[100px] xs:mt-[120px] mb-[80px] md:mb-[100px] md:mb-[50px] px-4"
+          className="max-w-[700px] mx-auto my-auto px-4"
+          // className="max-w-[700px] mx-auto  mt-[100px] xs:mt-[120px] mb-[80px] md:mb-[100px] md:mb-[50px] px-4"
         >
           <div>
             <h1
@@ -62,18 +66,18 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="md:min-h-[50%] h-full flex-end relative flex items-end">
+      <div className="h-[25%] xs:h-[35%] ms:h-[50%] flex-end relative flex items-end">
         <Image
           src={LowerBg}
           alt="Hero backgorund"
           fill
           sizes="(min-width: 768px) 100vw, 50vw"
-          className="object-cover object-center w-auto h-auto absolute  top-[0px] left-[0px] -z-50 overflow-hidden"
+          className="object-cover object-center w-auto h-auto absolute top-[0px] left-[0px] -z-50 overflow-hidden"
           placeholder="blur"
           blurDataURL={'../public/images/heroLowerBg.jpg'}
         />
         <div
-          className="absolute left-[12%] top-[-88px]"
+          className="absolute left-[12%] top-[-88px] hidden xs:block"
           data-aos="flip-left"
           data-aos-delay="500"
           data-aos-duration="500"
@@ -91,7 +95,7 @@ const Hero = () => {
             data-aos="fade-right"
             data-aos-duration="500"
             data-aos-easing="ease-in-out"
-            className="md:mt-[0] bg-solid-black max-w-[720px] md:max-w-[unset] mb-[50px] flex justify-center md:justify-evenly items-center text-white p-4 md:p-[32px] gap-[20px] flex-wrap md:flex-nowrap"
+            className="md:mt-[0] bg-solid-black max-w-[720px] md:max-w-[unset] my-auto xs:mb-[50px] flex justify-center md:justify-evenly items-center text-white p-4 md:p-[32px] gap-[20px] flex-wrap md:flex-nowrap"
           >
             <div className="flex flex-row gap-[10px] md:gap-[20px] flex-wrap md:flex-nowrap justify-center md:justify-evenly">
               <p>

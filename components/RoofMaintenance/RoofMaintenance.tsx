@@ -10,7 +10,8 @@ import BeforeAndAfterSlider from '../UI/BeforeAndAfterSlider';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import LineImage from '../../public/images/hero-line.svg';
-import MaintenanceBg1 from '../../public/images/maintainBg1.png';
+import MaintenanceBg from '../../public/images/backgroundLine.png';
+import MaintenanceBg2 from '../../public/images/backgroundLine2.png';
 import styles from './RoofMaintenance.module.css';
 import RoofMaintenanceForm from './RoofMaintenanceForm';
 
@@ -35,13 +36,22 @@ const RoofMaintenance = () => {
       className="relative bg-solid-white flex flex-col justify-center items-center pt-[110px] px-4 pb-[110px] overflow-hidden"
     >
       <Image
-        src={MaintenanceBg1}
+        src={MaintenanceBg}
         alt="Hero backgorund"
         fill
         // sizes="(min-width: 768px) 30vw, 100vw"
-        className={`${styles.maintainBg1} object-contain absolute z-10 max-w-[950px] max-h-[932px] w-auto h-auto opacity-30`}
+        className={`${styles.maintainBgTop} object-contain absolute z-10 max-w-[950px] max-h-[932px] w-auto h-auto opacity-30`}
         placeholder="blur"
-        blurDataURL={'../public/images/maintainBg1'}
+        blurDataURL={'../public/images/backgroundLine.png'}
+      />
+      <Image
+        src={MaintenanceBg2}
+        alt="Hero backgorund"
+        fill
+        // sizes="(min-width: 768px) 30vw, 100vw"
+        className={`${styles.maintainBgBottom} object-contain absolute z-10 max-w-[950px] max-h-[932px] w-auto h-auto opacity-30`}
+        placeholder="blur"
+        blurDataURL={'../public/images/backgroundLine.png'}
       />
       <div className="max-w-[1140px] flex justify-center items-center gap-[50px] mb-[132px] lg:flex-nowrap flex-wrap-reverse z-20">
         <div data-aos="fade-right">
@@ -98,7 +108,7 @@ const RoofMaintenance = () => {
             data-aos-offset="300"
             data-aos-easing="ease-in-sine"
           >
-            <div className="max-w-[487px] w-full flex flex-col rounded-[5px] shadow-[0_0_41px_4px_rgba(0,0,0,0.1)] cursor-pointer overflow-hidden transform hover:-translate-y-4 duration-500 ease-in-out">
+            <div className="bg-white max-w-[487px] w-full flex flex-col rounded-[5px] shadow-[0_0_41px_4px_rgba(0,0,0,0.1)] cursor-pointer overflow-hidden transform hover:-translate-y-4 duration-500 ease-in-out">
               <div className="flex flex-col bg-white px-[32px] pt-[38px] pb-[26px]">
                 <div className="flex gap-[10px] mb-[10px]">
                   <div className="h-[28.5px] w-[28.5px] mb-[15px] mt-auto">
@@ -135,7 +145,7 @@ const RoofMaintenance = () => {
               <div className="px-[32px]">
                 <hr className="bg-gray opacity-30" />
               </div>
-              <div className="flex flex-col px-[32px] py-[26px] min-h-[270px] h-full text-gray font-normal leading-[155%] text-[16px] font-['Open Sans']">
+              <div className=" flex  flex-col px-[32px] py-[26px] min-h-[270px] h-full text-gray font-normal leading-[155%] text-[16px] font-['Open Sans']">
                 <ul className="">
                   <li className="flex mb-[14px]">
                     <Image
@@ -214,7 +224,7 @@ const RoofMaintenance = () => {
                   Choose
                 </button>
               </div>
-              <div className="flex flex-col px-[32px] py-[26px] text-gray font-normal leading-[155%] text-[16px] font-['Open Sans']">
+              <div className="flex flex-col bg-white px-[32px] py-[26px] text-gray font-normal leading-[155%] text-[16px] font-['Open Sans']">
                 <ul className="">
                   <li className="flex mb-[14px]">
                     <Image

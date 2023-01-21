@@ -101,7 +101,15 @@ const Navbar = () => {
       <MobileNav open={open} setOpen={setOpen} />
       <div className="w-full justify-between max-w-[1140px] w-full mx-auto my-0 flex flex-column">
         <div className="flex items-center">
-          <Logo />
+          <Link
+            href="#"
+            to="hero"
+            activeClass="active"
+            smooth={true}
+            duration={500}
+          >
+            <Logo />
+          </Link>
         </div>
         <div className="hidden lg:flex w-[540px] justify-between items-center">
           {navLinksArray.map((linkName) => (

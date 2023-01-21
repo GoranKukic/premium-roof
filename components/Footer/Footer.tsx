@@ -6,24 +6,33 @@ import LocationIcon from '../../public/images/location.svg';
 import InstaIcon from '../../public/images/instagram.svg';
 import PhoneIcon from '../../public/images/phone.svg';
 import MailIcon from '../../public/images/mail.svg';
+import FooterBg from '../../public/images/backgroundLine2.png';
+import { Link } from 'react-scroll/modules';
 import styles from './Footer.module.css';
-import FooterBg from '../../public/images/lines32.png';
 
 const Footer = () => {
   return (
-    <div className="relative bg-grayBackground flex justify-center items-center flex flex-col">
+    <div className="relative bg-solid-white flex justify-center items-center flex flex-col overflow-hidden">
       <Image
         src={FooterBg}
         alt="Hero backgorund"
         fill
         // sizes="(min-width: 768px) 30vw, 100vw"
-        className={`${styles.footerBg} object-contain absolute z-10 max-w-[950px] max-h-[932px] w-auto h-auto opacity-30`}
+        className={`${styles.footerBg} object-contain absolute z-10 max-w-[950px] max-h-[932px] w-auto h-auto opacity-30 scale-125 md:scale-[185%]`}
         placeholder="blur"
-        blurDataURL={'../public/images/maintainBg1'}
+        blurDataURL={'../public/images/backgroundLine.png'}
       />
-      <div className="max-w-[1172px] w-full mx-auto my-[55px] px-4">
-        <div className="mb-[15px]">
-          <Logo />
+      <div className="max-w-[1172px] w-full mx-auto my-[55px] px-4 z-20">
+        <div className="mb-[15px] flex items-left">
+          <Link
+            href="#"
+            to="hero"
+            activeClass="active"
+            smooth={true}
+            duration={500}
+          >
+            <Logo />
+          </Link>
         </div>
         <div className="flex flex-col gap-[35px] md:gap-[0px] md:flex-row">
           <div className="flex-col max-w-[500px] w-full px-2">
@@ -118,7 +127,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-[1172px] w-full mx-auto px-4 mb-[8px]">
+      <div className="max-w-[1172px] w-full mx-auto px-4 mb-[8px] z-20">
         <div className="flex flex-col flex-col-reverse items-center md:flex-row  md:flex-nowrap justify-between text-[14px] font-normal text-gray font-['Open Sans'] leadeing-[155%]">
           <div>
             <p className="text-center">

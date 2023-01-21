@@ -1,0 +1,7 @@
+.whyWeBg {
+  inset: unset !important;
+}
+
+.whyWeBg {
+  @apply rotate-[57deg] -left-[295px]  -top-[20%] !important;
+}

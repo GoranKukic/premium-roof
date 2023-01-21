@@ -7,6 +7,8 @@ import StarIcon from '../../public/images/star.svg';
 import BulbIcon from '../../public/images/bulb.svg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import styles from './WhyWe.module.css';
+import WhyWeBg from '../../public/images/backgroundLine.png';
 
 const WhyWe = () => {
   useEffect(() => {
@@ -16,11 +18,21 @@ const WhyWe = () => {
   return (
     <div
       id="why-we"
-      className="bg-why-we-gradient bg-solid-white flex flex-col justify-center items-center px-4"
+      className="relative bg-why-we-gradient bg-solid-white flex flex-col justify-center items-center px-4"
     >
+      {' '}
+      <Image
+        src={WhyWeBg}
+        alt="Hero backgorund"
+        fill
+        // sizes="(min-width: 768px) 30vw, 100vw"
+        className={`${styles.whyWeBg} object-contain absolute z-10 max-w-[950px] max-h-[932px] w-auto h-auto opacity-30`}
+        placeholder="blur"
+        blurDataURL={'../public/images/backgroundLine.png'}
+      />
       <div
         data-aos="fade-down"
-        className="max-w-[770px] w-full mx-auto mt-[105px] mb-[75px]"
+        className="max-w-[770px] w-full mx-auto mt-[105px] mb-[75px] z-20"
       >
         <div className="mb-[70px]">
           <Headline
@@ -37,7 +49,7 @@ const WhyWe = () => {
           />
         </div>
       </div>
-      <div className="max-w-[1172px] w-full flex flex-wrap justify-center gap-[30px]">
+      <div className="max-w-[1172px] w-full flex flex-wrap justify-center gap-[30px] z-20">
         {/* Benefit */}
 
         <div data-aos="fade-right">

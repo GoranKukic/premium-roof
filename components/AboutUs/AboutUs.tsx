@@ -15,7 +15,7 @@ const AboutUs = () => {
   return (
     <div
       id="about-us"
-      className="bg-about-us-bg bg-cover bg-center bg-fixed flex justify-center items-center px-4"
+      className="relative bg-about-us-bg bg-cover bg-center bg-fixed flex justify-center items-center px-4 z-20"
     >
       <div className="max-w-[1172px] w-full my-[100px] mx-auto px-4 bg-[rgba(255, 255, 255, 0.29)] p-4 backdrop-blur-[8.5px]">
         <div
