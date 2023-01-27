@@ -1,4 +1,12 @@
+import { useRouter } from 'next/router';
+import en from '../../locales/en';
+import sr from '../../locales/sr';
+
 const CtaForm = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : sr;
+
   return (
     <form action="https://formspree.io/f/xknagknk" method="POST">
       <ul>
@@ -7,7 +15,7 @@ const CtaForm = () => {
             className='border border-gray w-full p-[22px] leading-tight focus:outline-none focus:shadow-outline"'
             id="name"
             type="text"
-            placeholder="Name"
+            placeholder={t.roofMaintainFormName}
             required
           />
         </li>
@@ -16,7 +24,7 @@ const CtaForm = () => {
             className='border border-gray w-full p-[22px] leading-tight focus:outline-none focus:shadow-outline"'
             id="surname"
             type="text"
-            placeholder="Surname"
+            placeholder={t.roofMaintainFormSurname}
             required
           />
         </li>
@@ -26,7 +34,7 @@ const CtaForm = () => {
             type="email"
             id="mail"
             name="email"
-            placeholder="Email"
+            placeholder={t.roofMaintainFormEmail}
             required
           />
         </li>
@@ -36,7 +44,7 @@ const CtaForm = () => {
             type="text"
             id="adress"
             name="adress"
-            placeholder="Adress"
+            placeholder={t.roofMaintainFormAderss}
             required
           />
         </li>
@@ -45,7 +53,7 @@ const CtaForm = () => {
             className="text-solid-black font-['Open Sans'] font-semibold text-[16px] leadeing-[167%] text-left pb-[12px]"
             htmlFor="roof'type"
           >
-            Maintenance package you would like:
+            {t.roofMaintainFormDesc}
           </label>
           <span className="flex flex-col md:flex-row gap-[17px] mb-[30px]">
             <span className=" flex">
@@ -62,7 +70,7 @@ const CtaForm = () => {
                   htmlFor="maintenance-lite"
                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  <span className="text-blue">Lite</span> 50$/mo
+                  <span className="text-blue">Lite</span> {t.roofMaintainFormLitePrice}
                 </label>
               </span>
             </span>
@@ -80,7 +88,7 @@ const CtaForm = () => {
                   htmlFor="maintenance-premium"
                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  <span className="text-blue">Premium</span> 160$/mo
+                  <span className="text-blue">Premium</span> {t.roofMaintainFormPremiumPrice}
                 </label>
               </span>
             </span>
@@ -94,7 +102,7 @@ const CtaForm = () => {
             type="submit"
             value="Submit"
           >
-            Send
+            {t.roofMaintainFormBtn}
           </button>
         </li>
       </ul>

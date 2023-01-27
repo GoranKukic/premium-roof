@@ -1,4 +1,3 @@
-// import { useRef, useState, useEffect } from 'react';
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 import Image from 'next/image';
@@ -7,6 +6,9 @@ import AfterImage from '../../public/images/after.jpg';
 import Dot from '../../public/images/dot.svg';
 import Arrow from '../../public/images/before-after-arrow.svg';
 import Pointer from '../../public/images/pointer.svg';
+import { useRouter } from 'next/router';
+import en from '../../locales/en';
+import sr from '../../locales/sr';
 
 const BeforeAndAfterSlider = () => {
   const FIRST_IMAGE = {
@@ -33,6 +35,10 @@ const BeforeAndAfterSlider = () => {
     justifyContent: 'center',
     cursor: 'pointer',
   };
+
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : sr;
 
   return (
     <div className="max-w-[557px] w-full max-h-[557px] h-full relative">
@@ -66,7 +72,7 @@ const BeforeAndAfterSlider = () => {
           className="w-[5px] h-[5px] opacity-30"
         ></Image>
         <p className="ml-[2px] text-[12px] xs:text-[16px] font-normal text-black font-['Prata'] leadeing-[155%]">
-          Swipe left-right
+          {t.roofMaintainSliderTopTitle}
         </p>
       </div>
       <ReactBeforeSliderComponent
@@ -88,7 +94,7 @@ const BeforeAndAfterSlider = () => {
           className="w-[5px] h-[5px] opacity-30"
         ></Image>
         <p className="ml-[2px] text-[12px] xs:text-[16px] font-normal text-black font-['Prata'] leadeing-[155%]">
-          Before and after roof wash
+          {t.roofMaintainSliderBottomTitle}
         </p>
       </div>
     </div>

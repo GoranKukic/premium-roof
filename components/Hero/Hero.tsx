@@ -10,10 +10,18 @@ import LowerBg from '../../public/images/heroLowerBg.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import { useRouter } from 'next/router';
+import en from '../../locales/en';
+import sr from '../../locales/sr';
+
 const Hero = () => {
   useEffect(() => {
     AOS.init({ duration: 2000, easing: 'ease-in-sine' });
   }, []);
+
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : sr;
 
   return (
     <div
@@ -24,7 +32,6 @@ const Hero = () => {
         src={UpperBg}
         alt="Hero backgorund"
         fill
-        // sizes="(min-width: 768px) 30vw, 100vw"
         className="object-contain object-top object-left max-w-[552px] max-h-[473px] w-auto h-auto absolute -z-50 overflow-hidden"
         placeholder="blur"
         blurDataURL={'../public/images/heroUpperBg.webp'}
@@ -41,7 +48,9 @@ const Hero = () => {
             <h1
               className={`text-[24px] md:text-[52px] text-center font-normal leading-[155%] logo-text text-black font-['Prata'] whitespace-normal`}
             >
-              Build your dream roof with<span> </span>
+              {/* Build your dream roof with<span> </span> */}
+              {t.heroTitle}
+              <span> </span>
               <HeadlineUnderline underlinedText={`Premium Roof\u00A0`} />
             </h1>
           </div>
@@ -104,7 +113,7 @@ const Hero = () => {
                 </span>
               </p>
               <p className="font-['Open Sans'] font-normal text-[16px] leadeing-[167%] flex justify-content items-center gap-[20px] text-center">
-                Satisfied Customers
+                {t.heroUsers}
               </p>
             </div>
             <div className="flex flex-row gap-[10px] md:gap-[20px] flex-wrap md:flex-nowrap justify-center md:justify-evenly">
@@ -114,7 +123,7 @@ const Hero = () => {
                 </span>
               </p>
               <p className="font-['Open Sans'] font-normal text-[16px] leadeing-[167%] flex justify-content items-center gap-[20px]">
-                Years of expirience
+                {t.heroExpirience}
               </p>
             </div>
           </div>

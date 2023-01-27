@@ -8,6 +8,9 @@ import { uuid } from 'uuidv4';
 import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useRouter } from 'next/router';
+import en from '../../locales/en';
+import sr from '../../locales/sr';
 
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
@@ -159,6 +162,10 @@ const Gallery = () => {
     setIsOpen(true);
   }
 
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : sr;
+
   return (
     <div
       id="gallery"
@@ -173,7 +180,7 @@ const Gallery = () => {
         <Headline
           textPosition={'left'}
           color="white"
-          headline="Our Work Gallery"
+          headline={t.galleryHeadline}
         />
       </div>
       <div className="w-full">
@@ -271,7 +278,7 @@ const Gallery = () => {
           box-border border-2 border-white border-solid rounded-sm leading-[155%] cursor-pointer bg-solid-black 
           transition-colors duration-700 transform hover:bg-white hover:text-black active:bg-gray"
         >
-          Gallery version 2
+          {t.galleryV2Btn}
         </button>
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog as="div" className="relative z-[100]" onClose={closeModal}>

@@ -9,18 +9,24 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styles from './WhyWe.module.css';
 import WhyWeBg from '../../public/images/backgroundLine.png';
+import { useRouter } from 'next/router';
+import en from '../../locales/en';
+import sr from '../../locales/sr';
 
 const WhyWe = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : sr;
+
   return (
     <div
       id="why-we"
       className="relative bg-why-we-gradient bg-solid-white flex flex-col justify-center items-center px-4"
     >
-      {' '}
       <Image
         src={WhyWeBg}
         alt="Hero backgorund"
@@ -37,11 +43,11 @@ const WhyWe = () => {
         <div className="mb-[70px]">
           <Headline
             headline={[
-              'Why ',
+              `${t.whyWeHeadline1}`,
               <span key={Math.random()} className="text-blue">
-                Premium Roof
+                {t.whyWeHeadline2}
               </span>,
-              ' is choice for you?',
+              `${t.whyWeHeadline3}`,
             ]}
             key={1}
             color={'black'}
@@ -60,8 +66,9 @@ const WhyWe = () => {
               className="max-h-[40px] h-full max-w-[40px] w-full"
             />
             <span className='text-[20px] md:text-[24px] font-normal text-gray font-["Prata"] leadeing-[155%] text-black'>
-              Quick and simple, <span className="text-blue">online</span>{' '}
-              creating
+              {t.whyWeCard1Headline1}
+              <span className="text-blue">{t.whyWeCard1Headline2}</span>{' '}
+              {t.whyWeCard1Headline3}
             </span>
             <Paragraph
               paragraph={
@@ -82,7 +89,8 @@ const WhyWe = () => {
               className="max-h-[40px] h-full max-w-[40px] w-full"
             />
             <span className='text-[20px] md:text-[24px] font-normal text-gray font-["Prata"] leadeing-[155%] text-black'>
-              Proven and guaranteed, <span className="text-blue">quality</span>
+              {t.whyWeCard2Headline1}
+              <span className="text-blue">{t.whyWeCard2Headline2}</span>
             </span>
             <Paragraph
               paragraph={
@@ -102,8 +110,8 @@ const WhyWe = () => {
               className="h-[40px] w-[40px]"
             />
             <span className='text-[20px] md:text-[24px]  font-normal text-gray font-["Prata"] leadeing-[155%] text-black max-w-[230px] md:max-w-[250px]'>
-              <span className="text-blue">Professional</span> advice and
-              opinions
+              <span className="text-blue">{t.whyWeCard3Headline1}</span>
+              {t.whyWeCard3Headline2}
             </span>
             <Paragraph
               paragraph={

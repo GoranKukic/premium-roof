@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["node"],
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -26,7 +27,9 @@
     "components/Navbar/Navbar.tsx",
     "components/UI/NavLinks.jsx",
     "components/UI/NavLinksMobile.jsx",
-    "components/Footer/Footer.tsx"
-, "components/UI/Paragraph.jsx", "components/Gallery/Gallery.jsx"  ],
+    "components/Footer/Footer.tsx",
+    "components/UI/Paragraph.jsx",
+    "components/Gallery/Gallery.jsx"
+  ],
   "exclude": ["node_modules"]
 }

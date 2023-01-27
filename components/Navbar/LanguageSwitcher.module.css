@@ -1,0 +1,18 @@
+.inputWrapper :global div:before {
+  @apply border-0;
+}
+
+.inputWrapper :global div {
+  outline: 'none';
+  background: transparent;
+  margin: 0 0 0 auto;
+}
+
+.inputWrapper :global div:focus {
+  outline: 'none';
+  background: transparent;
+}
+
+.inputWrapper :global div:focus:before {
+  display: none;
+}

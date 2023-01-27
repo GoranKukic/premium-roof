@@ -1,37 +1,21 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-scroll/modules';
-// import Image from 'next/image';
-// import ChevronDown from '../public/images/ChevronDown.svg';
 import CtaButton from '../UI/CtaButton';
 import Logo from '../UI/Logo';
 import NavLinks from '../UI/NavLinks';
 import NavLinksMobile from '../UI/NavLinksMobile';
 
-const navLinksArray = [
-  {
-    to: 'roof-configurator',
-    title: 'Roof Configurator',
-  },
-  {
-    to: 'roof-maintenance',
-    title: 'Roof Maintainance',
-  },
-  {
-    to: 'about-us',
-    title: 'About Us',
-  },
-  {
-    to: 'why-we',
-    title: 'Why We?',
-  },
-  {
-    to: 'gallery',
-    title: 'Gallery',
-  },
-];
+import { useRouter } from 'next/router';
+import en from '../../locales/en';
+import sr from '../../locales/sr';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const MobileNav = ({ open, setOpen }) => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : sr;
+
   return (
     <div
       className={`absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-fill h-screen bg-white transform ${
@@ -42,20 +26,61 @@ const MobileNav = ({ open, setOpen }) => {
       }}
     >
       <div className="flex flex-col">
-        {navLinksArray.map((linkName) => (
-          <NavLinksMobile
-            to={linkName.to}
-            key={Math.random()}
-            onClick={() => {
-              setOpen(!open);
-            }}
-          >
-            <p className="relative group cursor-pointer">
-              <span>{linkName.title}</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-blue transition-all group-hover:w-full"></span>
-            </p>
-          </NavLinksMobile>
-        ))}
+        <NavLinksMobile
+          to={'roof-configurator'}
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
+          <p className="relative group cursor-pointer">
+            <span>{t.navRoofConfigurator}</span>
+            <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-blue transition-all group-hover:w-full"></span>
+          </p>
+        </NavLinksMobile>
+        <NavLinksMobile
+          to={'roof-maintenance'}
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
+          <p className="relative group cursor-pointer">
+            <span>{t.navRoofMaintainance}</span>
+            <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-blue transition-all group-hover:w-full"></span>
+          </p>
+        </NavLinksMobile>
+        <NavLinksMobile
+          to={'about-us'}
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
+          <p className="relative group cursor-pointer">
+            <span>{t.navAboutUs}</span>
+            <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-blue transition-all group-hover:w-full"></span>
+          </p>
+        </NavLinksMobile>
+        <NavLinksMobile
+          to={'why-we'}
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
+          <p className="relative group cursor-pointer">
+            <span>{t.navWhyWe}</span>
+            <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-blue transition-all group-hover:w-full"></span>
+          </p>
+        </NavLinksMobile>
+        <NavLinksMobile
+          to={'gallery'}
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
+          <p className="relative group cursor-pointer">
+            <span>{t.navGallery}</span>
+            <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-blue transition-all group-hover:w-full"></span>
+          </p>
+        </NavLinksMobile>
 
         <Link
           href="#"
@@ -71,6 +96,9 @@ const MobileNav = ({ open, setOpen }) => {
         >
           <CtaButton />
         </Link>
+        <div className="flex justify-center items-center  my-4">
+          <LanguageSwitcher />
+        </div>
       </div>
     </div>
   );
@@ -87,6 +115,10 @@ const Navbar = () => {
       setNavbar(false);
     }
   };
+
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : sr;
 
   if (typeof window !== 'undefined') {
     window.addEventListener('scroll', changeBackground);
@@ -112,14 +144,36 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="hidden lg:flex w-[540px] justify-between items-center">
-          {navLinksArray.map((linkName) => (
-            <NavLinks to={linkName.to} key={Math.random()}>
-              <p className="relative group cursor-pointer">
-                <span>{linkName.title}</span>
-                <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-blue transition-all group-hover:w-full"></span>
-              </p>
-            </NavLinks>
-          ))}
+          <NavLinks to={'roof-configurator'}>
+            <p className="relative group cursor-pointer">
+              <span>{t.navRoofConfigurator}</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-blue transition-all group-hover:w-full"></span>
+            </p>
+          </NavLinks>
+          <NavLinks to={'roof-maintenance'}>
+            <p className="relative group cursor-pointer">
+              <span>{t.navRoofMaintainance}</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-blue transition-all group-hover:w-full"></span>
+            </p>
+          </NavLinks>
+          <NavLinks to={'about-us'}>
+            <p className="relative group cursor-pointer">
+              <span>{t.navAboutUs}</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-blue transition-all group-hover:w-full"></span>
+            </p>
+          </NavLinks>
+          <NavLinks to={'why-we'}>
+            <p className="relative group cursor-pointer">
+              <span>{t.navWhyWe}</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-blue transition-all group-hover:w-full"></span>
+            </p>
+          </NavLinks>
+          <NavLinks to={'gallery'}>
+            <p className="relative group cursor-pointer">
+              <span>{t.navGallery}</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-blue transition-all group-hover:w-full"></span>
+            </p>
+          </NavLinks>
         </div>
         <div className="hidden lg:flex items-center">
           <Link
@@ -132,6 +186,9 @@ const Navbar = () => {
           >
             <CtaButton />
           </Link>
+        </div>
+        <div className="flex justify-center items-center hidden lg:flex">
+          <LanguageSwitcher />
         </div>
         <div className=" flex justify-end items-center lg:hidden">
           <div

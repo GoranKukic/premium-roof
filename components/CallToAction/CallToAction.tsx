@@ -11,6 +11,9 @@ import LineImage from '../../public/images/hero-line.svg';
 import styles from './CallToAction.module.css';
 import CtaBg from '../../public/images/ctaBg.jpg';
 import CtaForm from './CtaForm';
+import { useRouter } from 'next/router';
+import en from '../../locales/en';
+import sr from '../../locales/sr';
 
 const CallToAction = () => {
   useEffect(() => {
@@ -26,6 +29,10 @@ const CallToAction = () => {
   function openModal() {
     setIsOpen(true);
   }
+
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : sr;
 
   return (
     <div
@@ -52,10 +59,10 @@ const CallToAction = () => {
       >
         <div className="mb-[55px]">
           <Headline
-            headline={'Live Your Dream '}
+            headline={t.ctaHeadline1}
             underline={
               <HeadlineUnderline
-                underlinedText={`Create Your Roof`}
+                underlinedText={t.ctaHeadline2}
                 color={'invert'}
               />
             }
@@ -71,7 +78,7 @@ const CallToAction = () => {
             type="button"
             onClick={openModal}
           >
-            Make Order
+            {t.ctaOrder}
           </button>
         </div>
         {/* Modal */}
@@ -105,7 +112,7 @@ const CallToAction = () => {
                     <div className="flex justify-between mb-[40px]">
                       <span className="text-solid-black font-['Prata'] font-normaluppercase text-[18px] xs:text-[24px] md:text-[32px] leadeing-[156%]">
                         <span className="relative">
-                          Make Order
+                          {t.ctaFormHeadline}
                           <Image
                             src={LineImage}
                             alt="Line"

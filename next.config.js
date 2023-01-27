@@ -7,7 +7,7 @@ const nextConfig = {
 
 module.exports = {
   i18n: {
-    locales: ['en'],
+    locales: ['en', 'sr'],
     defaultLocale: 'en',
   },
 };

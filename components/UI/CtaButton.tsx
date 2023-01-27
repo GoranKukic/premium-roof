@@ -1,6 +1,14 @@
 // import { Link } from 'react-scroll/modules';
 
+import { useRouter } from 'next/router';
+import en from '../../locales/en';
+import sr from '../../locales/sr';
+
 const CtaButton = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : sr;
+
   return (
     <button
       className="flex justify-center items-center h-[55px] w-[180px] text-white text-[16px] font-['Open Sans'] font-semibold
@@ -8,7 +16,7 @@ const CtaButton = () => {
       transition-colors duration-700 transform hover:bg-white hover:text-black active:bg-gray"
       type="button"
     >
-      Contact Us
+      {t.ctaBtnContent}
     </button>
   );
 };

@@ -1,4 +1,12 @@
+import { useRouter } from 'next/router';
+import en from '../../locales/en';
+import sr from '../../locales/sr';
+
 const CtaForm = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : sr;
+
   return (
     <form action="https://formspree.io/f/xknagknk" method="POST">
       <ul>
@@ -7,7 +15,7 @@ const CtaForm = () => {
             className='border border-gray w-full p-[22px] leading-tight focus:outline-none focus:shadow-outline"'
             id="name"
             type="text"
-            placeholder="Name"
+            placeholder={t.ctaFormName}
             required
           />
         </li>
@@ -16,7 +24,7 @@ const CtaForm = () => {
             className='border border-gray w-full p-[22px] leading-tight focus:outline-none focus:shadow-outline"'
             id="surname"
             type="text"
-            placeholder="Surname"
+            placeholder={t.ctaFormSurname}
             required
           />
         </li>
@@ -26,7 +34,7 @@ const CtaForm = () => {
             type="email"
             id="mail"
             name="email"
-            placeholder="Email"
+            placeholder={t.ctaFormEmail}
             required
           />
         </li>
@@ -36,7 +44,7 @@ const CtaForm = () => {
             type="text"
             id="adress"
             name="adress"
-            placeholder="Adress"
+            placeholder={t.ctaFormAdress}
             required
           />
         </li>
@@ -45,7 +53,7 @@ const CtaForm = () => {
             className="text-solid-black font-['Open Sans'] font-semibold text-[16px] leadeing-[167%] text-left pb-[12px]"
             htmlFor="roof'type"
           >
-            Roof type you would like:
+            {t.ctaFormRoofType}
           </label>
           <span className="flex flex-col md:flex-row gap-[17px]">
             <span className=" flex">
@@ -63,7 +71,7 @@ const CtaForm = () => {
                   htmlFor="gable"
                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  Gable
+                  {t.ctaFormRoofTypeGable}
                 </label>
               </span>
             </span>
@@ -81,7 +89,7 @@ const CtaForm = () => {
                   htmlFor="dutch-gable"
                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  Dutch Gable
+                  {t.ctaFormRoofTypeDutchGable}
                 </label>
               </span>
             </span>
@@ -99,7 +107,7 @@ const CtaForm = () => {
                   htmlFor="flat"
                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  Flat Roof
+                  {t.ctaFormRoofTypeFlatRoof}
                 </label>
               </span>
             </span>
@@ -135,7 +143,7 @@ const CtaForm = () => {
                   htmlFor="mansard"
                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  Mansard
+                  {t.ctaFormRoofTypeMansard}
                 </label>
               </span>
             </span>
@@ -146,7 +154,7 @@ const CtaForm = () => {
             className="text-solid-black font-['Open Sans'] font-semibold text-[16px] leadeing-[167%] text-left pb-[12px]"
             htmlFor="roofing-tiles"
           >
-            Roofing Tiles:
+            {t.ctaFormDesc2}
           </label>
           <span className="flex flex-col md:flex-row gap-[17px]">
             <span className=" flex">
@@ -164,7 +172,7 @@ const CtaForm = () => {
                   htmlFor="clay-roof-tiles"
                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  Clay Roof Tiles
+                  {t.ctaFormTilesTypeClay}
                 </label>
               </span>
             </span>
@@ -182,7 +190,7 @@ const CtaForm = () => {
                   htmlFor="concrete-tiles"
                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  Concrete Tiles
+                  {t.ctaFormTilesTypeConcrete}
                 </label>
               </span>
             </span>
@@ -200,7 +208,7 @@ const CtaForm = () => {
                   htmlFor="slate-tiles"
                   className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  Slate Tiles
+                  {t.ctaFormTilesTypeSlate}
                 </label>
               </span>
             </span>
@@ -214,7 +222,7 @@ const CtaForm = () => {
             type="submit"
             value="Submit"
           >
-            Send
+            {t.ctaFormBtn}
           </button>
         </li>
       </ul>

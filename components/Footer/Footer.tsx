@@ -9,8 +9,14 @@ import MailIcon from '../../public/images/mail.svg';
 import FooterBg from '../../public/images/backgroundLine2.png';
 import { Link } from 'react-scroll/modules';
 import styles from './Footer.module.css';
+import { useRouter } from 'next/router';
+import en from '../../locales/en';
+import sr from '../../locales/sr';
 
 const Footer = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : sr;
   return (
     <div className="relative bg-solid-white flex justify-center items-center flex flex-col overflow-hidden">
       <Image
@@ -68,24 +74,24 @@ const Footer = () => {
               <ul className=" flex flex-col gap-[15px] md:gap-[25px] text-[16px] font-normal text-gray font-['Open Sans'] leadeing-[155%]">
                 <li>
                   <FooterLink
-                    text={'Roof Configurator'}
+                    text={t.navRoofConfigurator}
                     to={'roof-configurator'}
                   />
                 </li>
                 <li>
                   <FooterLink
-                    text={'Roof Maintainance'}
+                    text={t.navRoofMaintainance}
                     to={'roof-maintenance'}
                   />
                 </li>
                 <li>
-                  <FooterLink text={'About Us'} to={'about-us'} />
+                  <FooterLink text={t.navAboutUs} to={'about-us'} />
                 </li>
                 <li>
-                  <FooterLink text={'Why We?'} to={'why-we'} />
+                  <FooterLink text={t.navWhyWe} to={'why-we'} />
                 </li>
                 <li>
-                  <FooterLink text={'Gallery'} to={'gallery'} />
+                  <FooterLink text={t.navGallery} to={'gallery'} />
                 </li>
               </ul>
             </div>
@@ -131,13 +137,13 @@ const Footer = () => {
         <div className="flex flex-col flex-col-reverse items-center md:flex-row  md:flex-nowrap justify-between text-[14px] font-normal text-gray font-['Open Sans'] leadeing-[155%]">
           <div>
             <p className="text-center">
-              Premium Roof {new Date().getFullYear()} <wbr /> &copy; | All
-              rights reserved
+              Premium Roof {new Date().getFullYear()} <wbr /> &copy; |
+              {t.footerDesc}
             </p>
           </div>
           <div>
             <a href="#" className="hover:text-blue hover:duration-500">
-              Privacy Policy
+              {t.footerPrivacyPlicy}
             </a>
           </div>
         </div>

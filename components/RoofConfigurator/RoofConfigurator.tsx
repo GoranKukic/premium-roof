@@ -15,8 +15,9 @@ import RealizationIcon from '../../public/images/realization.svg';
 import DesignImg from '../../public/images/design.jpg';
 import BuildImg from '../../public/images/build.jpg';
 import RealizationImg from '../../public/images/realization.jpg';
-
-// import { v4 as uuidv4 } from 'uuid';
+import { useRouter } from 'next/router';
+import en from '../../locales/en';
+import sr from '../../locales/sr';
 
 const RoofConfigurator = () => {
   useEffect(() => {
@@ -30,6 +31,10 @@ const RoofConfigurator = () => {
     setImg(image);
   };
 
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : sr;
+
   return (
     <div
       id="roof-configurator"
@@ -40,15 +45,15 @@ const RoofConfigurator = () => {
           data-aos="fade-right"
           className="text-left text-blue font-['Open Sans'] font-semibold uppercase text-[16px] leadeing-[167%] tracking-[.03em] mb-[8px]"
         >
-          roof configurator
+          {t.roofConfigTitle}
         </span>
         <div data-aos="fade-right" className="mb-[13px]">
-          <Headline
-            headline={'From Idea To Final Product'}
-            textPosition={'left'}
-          />
+          <Headline headline={t.roofConfigHeadline} textPosition={'left'} />
         </div>
-        <div data-aos="fade-right" className="opacity-60 mb-40px max-w-[540px]">
+        <div
+          data-aos="fade-right"
+          className="opacity-60 mb-40px max-w-[540px] text-capitalize"
+        >
           <Paragraph
             paragraph={
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et tempus, dictum mauris leo amet, elit. Dictumst morbi sed dignissim faucibus gravida. Integer pellentesque hac volutpat nullam morbi faucibus. Cursus ante ut integer id sit amet, sed nisl. '
@@ -64,7 +69,7 @@ const RoofConfigurator = () => {
               {/* Idea */}
               <Accordion
                 index={0}
-                heading="Idea"
+                heading={t.roofConfigAcIdea}
                 accordion={activeAcc}
                 setAccordion={setActiveAcc}
                 iconUrl={BulbIcon}
@@ -74,7 +79,7 @@ const RoofConfigurator = () => {
               {/* Design */}
               <Accordion
                 index={1}
-                heading="Design"
+                heading={t.roofConfigAcDesign}
                 accordion={activeAcc}
                 setAccordion={setActiveAcc}
                 iconUrl={PenIcon}
@@ -84,7 +89,7 @@ const RoofConfigurator = () => {
               {/* Build */}
               <Accordion
                 index={2}
-                heading="Build"
+                heading={t.roofConfigAcBuild}
                 accordion={activeAcc}
                 setAccordion={setActiveAcc}
                 iconUrl={BuildIcon}
@@ -94,7 +99,7 @@ const RoofConfigurator = () => {
               {/* Realization */}
               <Accordion
                 index={3}
-                heading="Realization"
+                heading={t.roofConfigAcRealization}
                 accordion={activeAcc}
                 setAccordion={setActiveAcc}
                 iconUrl={RealizationIcon}

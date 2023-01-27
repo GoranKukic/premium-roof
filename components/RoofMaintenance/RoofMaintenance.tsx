@@ -14,6 +14,9 @@ import MaintenanceBg from '../../public/images/backgroundLine.png';
 import MaintenanceBg2 from '../../public/images/backgroundLine2.png';
 import styles from './RoofMaintenance.module.css';
 import RoofMaintenanceForm from './RoofMaintenanceForm';
+import { useRouter } from 'next/router';
+import en from '../../locales/en';
+import sr from '../../locales/sr';
 
 const RoofMaintenance = () => {
   useEffect(() => {
@@ -30,6 +33,10 @@ const RoofMaintenance = () => {
     setIsOpen(true);
   }
 
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : sr;
+
   return (
     <div
       id="roof-maintenance"
@@ -37,7 +44,7 @@ const RoofMaintenance = () => {
     >
       <Image
         src={MaintenanceBg}
-        alt="Hero backgorund"
+        alt="Maintenance backgorund"
         fill
         // sizes="(min-width: 768px) 30vw, 100vw"
         className={`${styles.maintainBgTop} object-contain absolute z-10 max-w-[950px] max-h-[932px] w-auto h-auto opacity-30`}
@@ -46,7 +53,7 @@ const RoofMaintenance = () => {
       />
       <Image
         src={MaintenanceBg2}
-        alt="Hero backgorund"
+        alt="Maintenance backgorund"
         fill
         // sizes="(min-width: 768px) 30vw, 100vw"
         className={`${styles.maintainBgBottom} object-contain absolute z-10 max-w-[950px] max-h-[932px] w-auto h-auto opacity-30`}
@@ -60,13 +67,10 @@ const RoofMaintenance = () => {
 
         <div data-aos="fade-left" className="w-full max-w-[532px]">
           <span className="text-left text-blue font-['Open Sans'] font-semibold uppercase text-[16px] leadeing-[167%] tracking-[.03em] mb-[8px]">
-            Roof maintenance
+            {t.roofMaintainTitle}
           </span>
           <div className="mb-[13px]">
-            <Headline
-              headline={'Easy and simple cleaning'}
-              textPosition={'left'}
-            />
+            <Headline headline={t.roofMaintainHeadline} textPosition={'left'} />
           </div>
           <div className="opacity-60">
             <Paragraph
@@ -89,11 +93,11 @@ const RoofMaintenance = () => {
         <div data-aos="zoom-out-up" className="mb-[70px] max-w-[500px] w-full">
           <Headline
             headline={[
-              'Your ',
+              `${t.roofMaintainSecondHeadline1}`,
               <span key={Math.random()} className="text-blue">
-                Package
+                {t.roofMaintainSecondHeadline2}
               </span>,
-              ' of Maintenance',
+              `${t.roofMaintainSecondHeadline3}`,
             ]}
             key={1}
             color={'black'}
@@ -129,7 +133,7 @@ const RoofMaintenance = () => {
                     50
                   </p>
                   <p className="text-grey font-normal leading-[155%] text-[16px] font-['Open Sans']">
-                    $ / Monthly
+                    {t.roofMaintainPrice}
                   </p>
                 </div>
                 <button
@@ -139,7 +143,7 @@ const RoofMaintenance = () => {
                   type="button"
                   onClick={openModal}
                 >
-                  Choose
+                  {t.roofMaintainBtn}
                 </button>
               </div>
               <div className="px-[32px]">
@@ -211,7 +215,7 @@ const RoofMaintenance = () => {
                     160
                   </p>
                   <p className="text-white font-normal leading-[155%] text-[16px] opacity-70 font-['Open Sans']">
-                    $ / Monthly
+                    {t.roofMaintainPrice}
                   </p>
                 </div>
                 <button
@@ -221,7 +225,7 @@ const RoofMaintenance = () => {
                   type="button"
                   onClick={openModal}
                 >
-                  Choose
+                  {t.roofMaintainBtn}
                 </button>
               </div>
               <div className="flex flex-col bg-white px-[32px] py-[26px] text-gray font-normal leading-[155%] text-[16px] font-['Open Sans']">
@@ -311,15 +315,15 @@ const RoofMaintenance = () => {
                 <Dialog.Panel className="w-full max-w-[675px] transform overflow-hidden bg-white px-[33px] py-[30px] text-left align-middle shadow-xl transition-all">
                   <div className="flex justify-between mb-[40px]">
                     <span className="text-solid-black font-['Prata'] font-normaluppercase text-[18px] xs:text-[24px] md:text-[32px] leadeing-[165%]">
+                      <span>{t.roofMaintainFormHeadline1}</span>
                       <span className="relative">
-                        Maintenance
+                        {t.roofMaintainFormHeadline2}
                         <Image
                           src={LineImage}
                           alt="Line"
                           className={`absolute left-[0px] bottom-[-7px] md:bottom-[-13px] right-[-10px] w-full filter`}
                         ></Image>
                       </span>
-                      <span> Package</span>
                     </span>
                     <svg
                       width="31"

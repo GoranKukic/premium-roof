@@ -9,7 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.5",
     "@headlessui/react": "^1.7.4",
+    "@mui/material": "^5.11.6",
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^5.2.3",
     "eslint": "8.28.0",

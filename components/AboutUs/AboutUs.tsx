@@ -6,11 +6,18 @@ import HeadlineUnderline from '../UI/HeadlineUnderline';
 import { Link } from 'react-scroll/modules';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useRouter } from 'next/router';
+import en from '../../locales/en';
+import sr from '../../locales/sr';
 
 const AboutUs = () => {
   useEffect(() => {
     AOS.init({ duration: 800, easing: 'ease-in-sine' });
   }, []);
+
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : sr;
 
   return (
     <div
@@ -23,19 +30,20 @@ const AboutUs = () => {
           className="max-w-[545px] w-full mx-auto my-[144px] flex flex-col justify-center items-center"
         >
           <span className="text-center text-white font-['Open Sans'] font-semibold uppercase text-[16px] leadeing-[167%] tracking-[.03em]">
-            About us
+            {t.aboutUsTitle}
           </span>
           <div className="mb-[34px]">
             <Headline
-              headline={'Who is '}
+              headline={`${t.aboutUsHeadline} \n`}
               underline={
                 <HeadlineUnderline
-                  underlinedText={`\u00A0Premium Roof?`}
+                  underlinedText={`Premium Roof?`}
                   color={'black'}
                 />
               }
               color={'black'}
               textPosition={'center'}
+              className="whitespace-pre-line"
             ></Headline>
           </div>
           <div className="text-center mb-[34px]">
