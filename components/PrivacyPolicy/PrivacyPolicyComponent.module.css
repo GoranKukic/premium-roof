@@ -1,0 +1,20 @@
+.maintainBgTop {
+  inset: unset !important;
+}
+
+.maintainBgTop {
+  @apply -right-[225px] -top-[120px] !important;
+}
+
+.maintainBgBottom {
+  inset: unset !important;
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.maintainBgBottom {
+  @apply -rotate-[60deg] -left-[10%] md:-left-[50px] -bottom-[12%] md:-bottom-[220px] !important;
+}
+

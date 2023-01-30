@@ -66,7 +66,9 @@ const sr = {
   ctaFormTilesTypeSlate: 'Crep od škriljaca',
   ctaFormBtn: 'Pošalji',
   footerDesc: ' Sva prava zadržana',
-  footerPrivacyPlicy: 'Politika Privatnosti',
+  footerPrivacyPolicy: 'Politika Privatnosti',
+  privacyPolicyHeadline: 'Politika Privatnosti',
+  privacyPolicyGoBack: "Idi Nazad",
 };
 
 export default sr;

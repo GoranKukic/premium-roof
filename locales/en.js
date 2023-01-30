@@ -54,7 +54,7 @@ const en = {
   ctaFormName: 'Name',
   ctaFormSurname: 'Surame',
   ctaFormEmail: 'Email',
-  ctaFormAderss: 'Adress',
+  ctaFormAdress: 'Adress',
   ctaFormRoofType: 'Roof type you would like:',
   ctaFormRoofTypeGable: 'Gable',
   ctaFormRoofTypeDutchGable: 'Dutch Gable',
@@ -66,7 +66,9 @@ const en = {
   ctaFormTilesTypeSlate: 'Slate Tiles',
   ctaFormBtn: 'Send',
   footerDesc: ' All rights reserved',
-  footerPrivacyPlicy: 'Privacy Policy',
+  footerPrivacyPolicy: 'Privacy Policy',
+  privacyPolicyHeadline: "Privacy Policy",
+  privacyPolicyGoBack: "Go Back",
 };
 
 export default en;

@@ -1,5 +1,9 @@
 .inputWrapper :global div:before {
-  @apply border-0;
+  content: none;
+}
+
+.inputWrapper :global div:after {
+  @apply border-b-0;
 }
 
 .inputWrapper :global div {
@@ -11,8 +15,4 @@
 .inputWrapper :global div:focus {
   outline: 'none';
   background: transparent;
-}
-
-.inputWrapper :global div:focus:before {
-  display: none;
 }

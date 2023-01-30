@@ -142,8 +142,11 @@ const Footer = () => {
             </p>
           </div>
           <div>
-            <a href="#" className="hover:text-blue hover:duration-500">
-              {t.footerPrivacyPlicy}
+            <a
+              href="/privacy-policy"
+              className="hover:text-blue hover:duration-500"
+            >
+              {t.footerPrivacyPolicy}
             </a>
           </div>
         </div>
