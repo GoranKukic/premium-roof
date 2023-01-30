@@ -12,6 +12,7 @@ import styles from './Footer.module.css';
 import { useRouter } from 'next/router';
 import en from '../../locales/en';
 import sr from '../../locales/sr';
+import NextLink from 'next/link';
 
 const Footer = () => {
   const router = useRouter();
@@ -142,12 +143,12 @@ const Footer = () => {
             </p>
           </div>
           <div>
-            <a
+            <NextLink
               href="/privacy-policy"
               className="hover:text-blue hover:duration-500"
             >
               {t.footerPrivacyPolicy}
-            </a>
+            </NextLink>
           </div>
         </div>
       </div>
