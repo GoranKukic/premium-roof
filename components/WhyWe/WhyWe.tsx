@@ -50,8 +50,7 @@ const WhyWe = () => {
               `${t.whyWeHeadline3}`,
             ]}
             key={1}
-            color={'black'}
-            textPosition={'center'}
+            className={"text-black text-center"}
           />
         </div>
       </div>
@@ -74,7 +73,7 @@ const WhyWe = () => {
               paragraph={
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium nulla metus, quis potenti vitae. Dolor eget suspendisse vulputate feugiat.'
               }
-              textPostion={'center'}
+              className={"text-center"}
             ></Paragraph>
           </div>
         </div>

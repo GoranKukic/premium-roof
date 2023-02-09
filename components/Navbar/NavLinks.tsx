@@ -1,6 +1,11 @@
 import Link from 'react-scroll/modules/components/Link';
 
-const NavLinks = ({ to, children }) => {
+interface NavLinksProps {
+  to: string;
+  children:(React.ReactElement);
+}
+
+const NavLinks:React.FC<NavLinksProps> = ({ to, children }) => {
   return (
     <Link
       to={to}

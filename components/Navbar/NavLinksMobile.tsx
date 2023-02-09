@@ -1,6 +1,12 @@
 import Link from 'react-scroll/modules/components/Link';
 
-const NavLinksMobile = ({ to, children, onClick }) => {
+interface NavLinksMobileProps {
+  to: string;
+  children:(React.ReactElement);
+  onClick?: () => void;
+}
+
+const NavLinksMobile: React.FC<NavLinksMobileProps> = ({ to, children, onClick }) => {
   return (
     <Link
       href="#"

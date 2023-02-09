@@ -12,7 +12,15 @@ import { useRouter } from 'next/router';
 import en from '../../locales/en';
 import sr from '../../locales/sr';
 
-const NextArrow = (props) => {
+
+
+interface NextArrowProps {
+  className?: string;
+  style?: React.CSSProperties;
+  onClick?: () => void;
+}
+
+const NextArrow: React.FC<NextArrowProps> = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
@@ -41,7 +49,13 @@ const NextArrow = (props) => {
   );
 };
 
-const PrevArrow = (props) => {
+interface PrevArrowProps {
+  className?: string;
+  style?: React.CSSProperties;
+  onClick?: () => void;
+}
+
+const PrevArrow: React.FC<PrevArrowProps> = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
@@ -150,6 +164,14 @@ const Gallery = () => {
       id: 10,
       img: '/images/gallery/roof10.jpg',
     },
+    {
+      id: 11,
+      img: '/images/gallery/roof11.jpg',
+    },
+    {
+      id: 12,
+      img: '/images/gallery/roof12.jpg',
+    },
   ];
 
   let [isOpen, setIsOpen] = useState(false);
@@ -178,8 +200,7 @@ const Gallery = () => {
         className="mb-[40px]"
       >
         <Headline
-          textPosition={'left'}
-          color="white"
+          className={"text-left text-white"}
           headline={t.galleryHeadline}
         />
       </div>
@@ -228,9 +249,9 @@ const Gallery = () => {
                 ref={(slider) => setSlider1(slider)}
                 className="custom-slick"
               >
-                {slidesData.map((slide) => (
+                {slidesData.map((slide, index) => (
                   <Image
-                    key={uuid}
+                    key={index}
                     className="slick-slide-image object-cover"
                     src={slide.img}
                     alt="Roof"
@@ -253,7 +274,7 @@ const Gallery = () => {
             asNavFor={nav1}
             ref={(slider) => setSlider2(slider)}
           >
-            {slidesData.map((slide) => (
+            {slidesData.map((slide, index) => (
               <div className="slick-slide" key={slide.id}>
                 <Image
                   className="slick-slide-image object-cover"
@@ -318,7 +339,7 @@ const Gallery = () => {
                       <div className="grid grid-cols-1 mp:grid-cols-2 lg:grid-cols-3 gap-4 grid-flow-row-dense">
                         <div className="mp:col-span-2 bg-white rounded-lg overflow-hidden aspect-square mp:aspect-[2/0.98] relative">
                           <Image
-                            key={uuid}
+                            key={slidesData[0].id}
                             src={slidesData[0].img}
                             alt="Roof"
                             className="w-auto h-auto object-cover"
@@ -328,7 +349,7 @@ const Gallery = () => {
                         </div>
                         <div className="bg-white rounded-lg overflow-hidden aspect-square relative">
                           <Image
-                            key={uuid}
+                            key={slidesData[1].id}
                             src={slidesData[1].img}
                             alt="Roof"
                             className="w-auto h-auto object-cover"
@@ -338,7 +359,7 @@ const Gallery = () => {
                         </div>
                         <div className="bg-white rounded-lg overflow-hidden aspect-square relative">
                           <Image
-                            key={uuid}
+                            key={slidesData[2].id}
                             src={slidesData[2].img}
                             alt="Roof"
                             className="w-auto h-auto object-cover"
@@ -348,7 +369,7 @@ const Gallery = () => {
                         </div>
                         <div className="bg-white rounded-lg overflow-hidden aspect-square relative">
                           <Image
-                            key={uuid}
+                            key={slidesData[3].id}
                             src={slidesData[3].img}
                             alt="Roof"
                             className="w-auto h-auto object-cover"
@@ -358,7 +379,7 @@ const Gallery = () => {
                         </div>
                         <div className="bg-white rounded-lg overflow-hidden aspect-square relative">
                           <Image
-                            key={uuid}
+                            key={slidesData[4].id}
                             src={slidesData[4].img}
                             alt="Roof"
                             className="w-auto h-auto object-cover"
@@ -368,7 +389,7 @@ const Gallery = () => {
                         </div>
                         <div className="bg-white rounded-lg overflow-hidden aspect-square relative">
                           <Image
-                            key={uuid}
+                            key={slidesData[5].id}
                             src={slidesData[5].img}
                             alt="Roof"
                             className="w-auto h-auto object-cover"
@@ -378,7 +399,7 @@ const Gallery = () => {
                         </div>
                         <div className="mp:col-span-2 bg-white rounded-lg overflow-hidden aspect-square mp:aspect-[2/0.98] relative">
                           <Image
-                            key={uuid}
+                            key={slidesData[6].id}
                             src={slidesData[6].img}
                             alt="Roof"
                             className="w-auto h-auto object-cover"
@@ -388,7 +409,7 @@ const Gallery = () => {
                         </div>
                         <div className="bg-white rounded-lg overflow-hidden aspect-square relative">
                           <Image
-                            key={uuid}
+                            key={slidesData[7].id}
                             src={slidesData[7].img}
                             alt="Roof"
                             className="w-auto h-auto object-cover"
@@ -398,7 +419,7 @@ const Gallery = () => {
                         </div>
                         <div className="bg-white rounded-lg overflow-hidden relative aspect-square">
                           <Image
-                            key={uuid}
+                            key={slidesData[8].id}
                             src={slidesData[8].img}
                             alt="Roof"
                             className="w-auto h-auto object-cover"
@@ -408,7 +429,7 @@ const Gallery = () => {
                         </div>
                         <div className="bg-white rounded-lg overflow-hidden aspect-square relative aspect-square">
                           <Image
-                            key={uuid}
+                            key={slidesData[9].id}
                             src={slidesData[9].img}
                             alt="Roof"
                             className="w-auto h-auto object-cover"
@@ -418,8 +439,8 @@ const Gallery = () => {
                         </div>
                         <div className="mp:col-span-2 bg-white rounded-lg overflow-hidden aspect-square mp:aspect-[2/0.98] relative">
                           <Image
-                            key={uuid}
-                            src={slidesData[1].img}
+                            key={slidesData[10].id}
+                            src={slidesData[10].img}
                             alt="Roof"
                             className="w-auto h-auto object-cover"
                             fill
@@ -428,8 +449,8 @@ const Gallery = () => {
                         </div>
                         <div className="bg-white rounded-lg overflow-hidden relative aspect-square">
                           <Image
-                            key={uuid}
-                            src={slidesData[2].img}
+                            key={slidesData[11].id}
+                            src={slidesData[11].img}
                             alt="Roof"
                             className="w-auto h-auto object-cover"
                             fill

@@ -3,12 +3,13 @@
 This is "Premium Roof" company presentation web page.
 
 ## The brief
+This project is:
 
-- Created with React and Next.js,
+- Powered by Next.js (framework for React ), it have server side rendering (SSR),
+- Structured with TypeScript,
 - Styled with Tailwind CSS,
-- Website is fully responsive down to 250px of viewport width,
-- Website has internationalization (i18n), languages are english and serbian,
-- Used TypeScript in some components,
+- Fully responsive down to 250px of viewport width,
+- Has internationalization (i18n), languages are english and serbian,
 
 ## Development requirements
 

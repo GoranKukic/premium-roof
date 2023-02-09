@@ -35,15 +35,13 @@ const AboutUs = () => {
           <div className="mb-[34px]">
             <Headline
               headline={`${t.aboutUsHeadline} \n`}
+              className={"text-black text-center whitespace-pre-line"}
               underline={
                 <HeadlineUnderline
                   underlinedText={`Premium Roof?`}
                   color={'black'}
                 />
               }
-              color={'black'}
-              textPosition={'center'}
-              className="whitespace-pre-line"
             ></Headline>
           </div>
           <div className="text-center mb-[34px]">
@@ -51,7 +49,7 @@ const AboutUs = () => {
               paragraph={
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium nulla metus, quis potenti vitae. Dolor eget suspendisse vulputate feugiat. Sagittis at tincidunt tristique ut. Consectetur ultrices aliquam amet a egestas. Hac elit ornare rhoncus arcu, vel vitae felis.'
               }
-              textPostion={'center'}
+              className={"text-center"}
             />
           </div>
           <Link

@@ -48,7 +48,8 @@ const RoofConfigurator = () => {
           {t.roofConfigTitle}
         </span>
         <div data-aos="fade-right" className="mb-[13px]">
-          <Headline headline={t.roofConfigHeadline} textPosition={'left'} />
+          <Headline headline={t.roofConfigHeadline}
+          className={"text-left"}/>
         </div>
         <div
           data-aos="fade-right"

@@ -70,21 +70,20 @@ const RoofMaintenance = () => {
             {t.roofMaintainTitle}
           </span>
           <div className="mb-[13px]">
-            <Headline headline={t.roofMaintainHeadline} textPosition={'left'} />
+            <Headline headline={t.roofMaintainHeadline}
+            className={"text-left"}/>
           </div>
           <div className="opacity-60">
             <Paragraph
               paragraph={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium nulla metus, quis potenti vitae. Dolor eget suspendisse vulputate feugiat. Sagittis at tincidunt tristique ut. Consectetur ultrices aliquam amet a egestas. Hac elit ornare rhoncus arcu, vel vitae felis.`}
-              textPosition={'left'}
-              color={''}
+              className={"text-left"}
             />
             <br />
             <Paragraph
               paragraph={
                 'Elementum in nunc, tortor, feugiat eget viverra sollicitudin facilisi. Aliquam, vel, consequat magnis augue. Sit lacinia ornare auctor massa urna, mattis blandit quis. '
               }
-              textPosition={'left'}
-              color={''}
+              className={"text-left"}
             />
           </div>
         </div>
@@ -100,8 +99,7 @@ const RoofMaintenance = () => {
               `${t.roofMaintainSecondHeadline3}`,
             ]}
             key={1}
-            color={'black'}
-            textPosition={'center'}
+            className={"text-center text-black"}
           />
         </div>
         <div className="max-w-[1024px] w-full flex items-center justify-center gap-[50px] lg:flex-nowrap flex-wrap">

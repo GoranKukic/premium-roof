@@ -1,7 +1,6 @@
 import { useEffect, useState, Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import Headline from '../UI/Headline';
-import Paragraph from '../UI/Paragraph';
 import Image from 'next/image';
 import SparkleIcon from '../../public/images/sparkle.svg';
 import CheckIcon from '../../public/images/check.svg';
@@ -72,8 +71,7 @@ const RoofMaintenance = () => {
           <Headline
             headline={t.privacyPolicyHeadline}
             key={1}
-            color={'black'}
-            textPosition={'center'}
+            className={"text-black text-center"}
           />
         </div>
         <div className="w-full mb-[110px]">

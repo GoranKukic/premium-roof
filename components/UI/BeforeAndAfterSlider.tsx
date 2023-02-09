@@ -10,17 +10,38 @@ import { useRouter } from 'next/router';
 import en from '../../locales/en';
 import sr from '../../locales/sr';
 
-const BeforeAndAfterSlider = () => {
-  const FIRST_IMAGE = {
+interface ImageProps {
+  imageUrl: string;
+  alt: string;
+}
+
+interface DelimiterIconStylesProps {
+  width: string;
+  height: string;
+  backgroundSize: string;
+  borderRadius: string;
+  marginTop: string;
+  marginLeft: string;
+  background: string;
+  position: any;
+  top: string;
+  display: string;
+  alignItems: string;
+  justifyContent: string;
+  cursor: string;
+}
+
+const BeforeAndAfterSlider: React.FC = () => {
+  const FIRST_IMAGE: ImageProps = {
     imageUrl: AfterImage.src,
     alt: 'After',
   };
-  const SECOND_IMAGE = {
+  const SECOND_IMAGE: ImageProps = {
     imageUrl: BeforeImage.src,
     alt: 'Before',
   };
 
-  const delimiterIconStyles = {
+  const delimiterIconStyles: DelimiterIconStylesProps = {
     width: '48px',
     height: '48px',
     backgroundSize: 'cover',

@@ -1,6 +1,6 @@
 import Logo from '../UI/Logo';
 import Paragraph from '../UI/Paragraph';
-import FooterLink from '../UI/FooterLink';
+import FooterLink from './FooterLink';
 import Image from 'next/image';
 import LocationIcon from '../../public/images/location.svg';
 import InstaIcon from '../../public/images/instagram.svg';
@@ -48,9 +48,7 @@ const Footer = () => {
                 paragraph={
                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium nulla metus, quis potenti vitae. Dolor eget suspendisse vulputate feugiat.'
                 }
-                color={'gray'}
-                className={'flex'}
-                textPostion={'left'}
+                className={'text-gray flex text-left'}
               />
             </div>
             <div className="transition-transform duration-500 ease-in-out flex gap-[7px]">

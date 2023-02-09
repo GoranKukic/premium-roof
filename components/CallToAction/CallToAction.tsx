@@ -66,8 +66,7 @@ const CallToAction = () => {
                 color={'invert'}
               />
             }
-            color={'white'}
-            textPosition={'center'}
+            className={"text-white text-center"}
           ></Headline>
         </div>
         <div>

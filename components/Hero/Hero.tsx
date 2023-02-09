@@ -31,18 +31,18 @@ const Hero = () => {
       <Image
         src={UpperBg}
         alt="Hero backgorund"
+        sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 25vw"
         fill
         className="object-contain object-top object-left max-w-[552px] max-h-[473px] w-auto h-auto absolute -z-50 overflow-hidden"
         placeholder="blur"
         blurDataURL={'../public/images/heroUpperBg.webp'}
       />
-      <div className="h-[75%] xs:h-[65%]  ms:h-[50%] relative w-full bg-transparent flex justify-center">
+      <div className="h-[75%] xs:h-[65%]  mp:h-[50%] relative w-full bg-transparent flex justify-center">
         <div
           data-aos="fade-down"
           data-aos-duration="500"
           data-aos-easing="ease-in-out"
           className="max-w-[700px] mx-auto my-auto px-4"
-          // className="max-w-[700px] mx-auto  mt-[100px] xs:mt-[120px] mb-[80px] md:mb-[100px] md:mb-[50px] px-4"
         >
           <div>
             <h1
@@ -51,7 +51,7 @@ const Hero = () => {
               {/* Build your dream roof with<span> </span> */}
               {t.heroTitle}
               <span> </span>
-              <HeadlineUnderline underlinedText={`Premium Roof\u00A0`} />
+              <HeadlineUnderline underlinedText={`Premium Roof\u00A0`}/>
             </h1>
           </div>
           <div className="mt-[12px]">
@@ -75,7 +75,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="h-[25%] xs:h-[35%] ms:h-[50%] flex-end relative flex items-end">
+      <div className="h-[25%] xs:h-[35%] mp:h-[50%] flex-end relative flex items-end">
         <Image
           src={LowerBg}
           alt="Hero backgorund"

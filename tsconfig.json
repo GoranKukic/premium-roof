@@ -21,15 +21,15 @@
     "**/*.ts",
     "**/*.tsx",
     "components/RoofMaintenance/RoofMaintenance.tsx",
-    "components/UI/BeforeAndAfterSlider.jsx",
+    "components/UI/BeforeAndAfterSlider.tsx",
     "components/RoofConfigurator.jsx",
     "components/UI/CtaButton.tsx",
     "components/Navbar/Navbar.tsx",
-    "components/UI/NavLinks.jsx",
-    "components/UI/NavLinksMobile.jsx",
+    "components/Navbar/NavLinks.tsx",
+    "components/Navbar/NavLinksMobile.tsx",
     "components/Footer/Footer.tsx",
-    "components/UI/Paragraph.jsx",
-    "components/Gallery/Gallery.jsx"
+    "components/UI/Paragraph.tsx",
+    "components/Gallery/Gallery.tsx"
   ],
   "exclude": ["node_modules"]
 }
