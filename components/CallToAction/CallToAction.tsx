@@ -45,7 +45,7 @@ const CallToAction = () => {
             src={CtaBg}
             alt="Cta backgorund"
             fill
-            sizes="(min-width: 768px) 50vw, 100vw"
+            sizes="100vw"
             className="object-cover oject-center w-auto h-auto overflow-hidden"
             placeholder="blur"
             blurDataURL={'../public/images/ctaBg.jpg'}

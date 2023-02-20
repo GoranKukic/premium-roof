@@ -31,7 +31,7 @@ const Hero = () => {
       <Image
         src={UpperBg}
         alt="Hero backgorund"
-        sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 25vw"
+        sizes="100vw, (max-width: 1023px) 50vw, 25vw"
         fill
         priority
         className="object-contain object-top object-left max-w-[552px] max-h-[473px] w-auto h-auto absolute z-10 overflow-hidden"
@@ -82,7 +82,7 @@ const Hero = () => {
           alt="Hero backgorund"
           fill
           priority
-          sizes="(min-width: 768px) 100vw, 50vw"
+          sizes="100vw"
           className="object-cover object-center w-auto h-auto absolute top-[0px] left-[0px] -z-50 overflow-hidden"
           placeholder="blur"
           blurDataURL={"../public/images/heroLowerBg.jpg"}

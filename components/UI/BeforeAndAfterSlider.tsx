@@ -1,8 +1,8 @@
 import ReactBeforeSliderComponent from "react-before-after-slider-component";
 import "react-before-after-slider-component/dist/build.css";
 import Image from "next/image";
-import BeforeImage from "../../public/images/before.jpg";
-import AfterImage from "../../public/images/after.jpg";
+import BeforeImage from "../../public/images/before_new.webp";
+import AfterImage from "../../public/images/after_new.webp";
 import Dot from "../../public/images/dot.svg";
 import Arrow from "../../public/images/before-after-arrow.svg";
 import Pointer from "../../public/images/pointer.svg";
