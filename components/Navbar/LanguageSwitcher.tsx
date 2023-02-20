@@ -10,10 +10,13 @@ import sr from '../../locales/sr';
 import styles from './LanguageSwitcher.module.css';
 import { v4 as uuidv4 } from 'uuid';
 
+interface LanguageSwitcherProps {
+  ariaId: string;
+  id: string;
+}
+const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ ariaId, id }) => {
 
-export default function LanguageSwitcher (props) {
-
-  const [id] = useState(`language-switcher-${props.id}-${uuidv4()}`);
+  const [generatedId] = useState(`language-switcher-${id}-${uuidv4()}`);
 
   const router = useRouter();
   const { locale } = router;
@@ -29,34 +32,36 @@ export default function LanguageSwitcher (props) {
   //   const path = locale + router.pathname;
   //   router.replace(path, path, { locale });
   // };
-
-  // const id = `language-switcher-${props.id}-${uuidv4()}`;
   
   return (
-    <Box sx={{ minWidth: 50 }} className="relative">
-      <FormControl fullWidth>
-        <div className={`${styles.inputWrapper} relative group`}>
-          <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-blue transition-all group-hover:w-full"></span>
-          <Select
-            id={id}
-            aria-labelledby={props.id}
-            value={locale}
-            inputProps={{ id: id }}
-            onChange={changeLanguage}
-            variant="standard"
-            className="text-gray"
-          >
-            <MenuItem value="en" className="text-gray">
-              EN
-            </MenuItem>
-            <MenuItem value="sr" className="text-gray">
-              SR
-            </MenuItem>
-          </Select>
-        </div>
-      </FormControl>
-    </Box>
+    <div id={generatedId}>
+      <Box sx={{ minWidth: 50 }} className="relative">
+        <FormControl fullWidth>
+          <div className={`${styles.inputWrapper} relative group`}>
+            <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-blue transition-all group-hover:w-full"></span>
+            <Select
+              id={generatedId + "selectId"}
+              aria-labelledby={ariaId}
+              value={locale}
+              inputProps={{ id: generatedId + "inputId" }}
+              onChange={changeLanguage}
+              variant="standard"
+              className="text-gray"
+            >
+              <MenuItem value="en" className="text-gray">
+                EN
+              </MenuItem>
+              <MenuItem value="sr" className="text-gray">
+                SR
+              </MenuItem>
+            </Select>
+          </div>
+        </FormControl>
+      </Box>
+    </div>
   );
-}
+};
+
+export default LanguageSwitcher;
 
 

@@ -1,17 +1,17 @@
-import { useEffect } from 'react';
-import Headline from '../UI/Headline';
-import Image from 'next/image';
-import Paragraph from '../UI/Paragraph';
-import PenIcon from '../../public/images/pen.svg';
-import StarIcon from '../../public/images/star.svg';
-import BulbIcon from '../../public/images/bulb.svg';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import styles from './WhyWe.module.css';
-import WhyWeBg from '../../public/images/backgroundLine.png';
-import { useRouter } from 'next/router';
-import en from '../../locales/en';
-import sr from '../../locales/sr';
+import { useEffect } from "react";
+import Headline from "../UI/Headline";
+import Image from "next/image";
+import Paragraph from "../UI/Paragraph";
+import PenIcon from "../../public/images/pen.svg";
+import StarIcon from "../../public/images/star.svg";
+import BulbIcon from "../../public/images/bulb.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import styles from "./WhyWe.module.css";
+import WhyWeBg from "../../public/images/backgroundLine.png";
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import sr from "../../locales/sr";
 
 const WhyWe = () => {
   useEffect(() => {
@@ -20,21 +20,21 @@ const WhyWe = () => {
 
   const router = useRouter();
   const { locale } = router;
-  const t = locale === 'en' ? en : sr;
+  const t = locale === "en" ? en : sr;
 
   return (
     <div
       id="why-we"
-      className="relative bg-why-we-gradient bg-solid-white flex flex-col justify-center items-center px-4"
+      className="relative bg-why-we-gradient bg-solid-white flex flex-col justify-center items-center px-4 overflow-hidden"
     >
       <Image
         src={WhyWeBg}
-        alt="Hero backgorund"
+        alt="Why we backgorund"
         fill
         // sizes="(min-width: 768px) 30vw, 100vw"
         className={`${styles.whyWeBg} object-contain absolute z-10 max-w-[950px] max-h-[932px] w-auto h-auto opacity-30`}
         placeholder="blur"
-        blurDataURL={'../public/images/backgroundLine.png'}
+        blurDataURL={"../public/images/backgroundLine.png"}
       />
       <div
         data-aos="fade-down"
@@ -66,12 +66,12 @@ const WhyWe = () => {
             />
             <span className='text-[20px] md:text-[24px] font-normal text-gray font-["Prata"] leadeing-[155%] text-black'>
               {t.whyWeCard1Headline1}
-              <span className="text-blue">{t.whyWeCard1Headline2}</span>{' '}
+              <span className="text-blue">{t.whyWeCard1Headline2}</span>{" "}
               {t.whyWeCard1Headline3}
             </span>
             <Paragraph
               paragraph={
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium nulla metus, quis potenti vitae. Dolor eget suspendisse vulputate feugiat.'
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium nulla metus, quis potenti vitae. Dolor eget suspendisse vulputate feugiat."
               }
               className={"text-center"}
             ></Paragraph>
@@ -93,7 +93,7 @@ const WhyWe = () => {
             </span>
             <Paragraph
               paragraph={
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium nulla metus, quis potenti vitae. Dolor eget suspendisse vulputate feugiat.'
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium nulla metus, quis potenti vitae. Dolor eget suspendisse vulputate feugiat."
               }
             ></Paragraph>
           </div>
@@ -114,7 +114,7 @@ const WhyWe = () => {
             </span>
             <Paragraph
               paragraph={
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium nulla metus, quis potenti vitae. Dolor eget suspendisse vulputate feugiat.'
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium nulla metus, quis potenti vitae. Dolor eget suspendisse vulputate feugiat."
               }
             ></Paragraph>
           </div>

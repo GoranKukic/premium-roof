@@ -1,43 +1,44 @@
-import { useEffect } from 'react';
-import CtaButton from '../UI/CtaButton';
-import { Link } from 'react-scroll/modules';
-import Image from 'next/image';
-import HeadlineUnderline from '../UI/HeadlineUnderline';
-import Badge from '../../public/images/hero-badge.png';
-import UpperBg from '../../public/images/heroUpperBg.webp';
-import LowerBg from '../../public/images/heroLowerBg.jpg';
+import { useEffect } from "react";
+import CtaButton from "../UI/CtaButton";
+import { Link } from "react-scroll/modules";
+import Image from "next/image";
+import HeadlineUnderline from "../UI/HeadlineUnderline";
+import Badge from "../../public/images/hero-badge.png";
+import UpperBg from "../../public/images/heroUpperBg.webp";
+import LowerBg from "../../public/images/heroLowerBg.jpg";
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-import { useRouter } from 'next/router';
-import en from '../../locales/en';
-import sr from '../../locales/sr';
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import sr from "../../locales/sr";
 
 const Hero = () => {
   useEffect(() => {
-    AOS.init({ duration: 2000, easing: 'ease-in-sine' });
+    AOS.init({ duration: 2000, easing: "ease-in-sine" });
   }, []);
 
   const router = useRouter();
   const { locale } = router;
-  const t = locale === 'en' ? en : sr;
+  const t = locale === "en" ? en : sr;
 
   return (
     <div
       id="hero"
-      className="h-[100vh] flex flex-col relative overflow-hidden relative"
+      className="h-[100vh] flex flex-col relative overflow-hidden bg-white relative z-20"
     >
       <Image
         src={UpperBg}
         alt="Hero backgorund"
         sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 25vw"
         fill
-        className="object-contain object-top object-left max-w-[552px] max-h-[473px] w-auto h-auto absolute -z-50 overflow-hidden"
+        priority
+        className="object-contain object-top object-left max-w-[552px] max-h-[473px] w-auto h-auto absolute z-10 overflow-hidden"
         placeholder="blur"
-        blurDataURL={'../public/images/heroUpperBg.webp'}
+        blurDataURL={"../public/images/heroUpperBg.webp"}
       />
-      <div className="h-[75%] xs:h-[65%]  mp:h-[50%] relative w-full bg-transparent flex justify-center">
+      <div className="h-[75%] xs:h-[65%]  mp:h-[50%] relative w-full bg-transparent flex justify-center z-20">
         <div
           data-aos="fade-down"
           data-aos-duration="500"
@@ -51,7 +52,7 @@ const Hero = () => {
               {/* Build your dream roof with<span> </span> */}
               {t.heroTitle}
               <span> </span>
-              <HeadlineUnderline underlinedText={`Premium Roof\u00A0`}/>
+              <HeadlineUnderline underlinedText={`Premium Roof\u00A0`} />
             </h1>
           </div>
           <div className="mt-[12px]">
@@ -80,13 +81,14 @@ const Hero = () => {
           src={LowerBg}
           alt="Hero backgorund"
           fill
+          priority
           sizes="(min-width: 768px) 100vw, 50vw"
           className="object-cover object-center w-auto h-auto absolute top-[0px] left-[0px] -z-50 overflow-hidden"
           placeholder="blur"
-          blurDataURL={'../public/images/heroLowerBg.jpg'}
+          blurDataURL={"../public/images/heroLowerBg.jpg"}
         />
         <div
-          className="absolute left-[12%] top-[-88px] hidden xs:block"
+          className="absolute left-[12%] top-[-88px] hidden xs:block z-20"
           data-aos="flip-left"
           data-aos-delay="500"
           data-aos-duration="500"

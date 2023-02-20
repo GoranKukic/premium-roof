@@ -1,23 +1,23 @@
-import Logo from '../UI/Logo';
-import Paragraph from '../UI/Paragraph';
-import FooterLink from './FooterLink';
-import Image from 'next/image';
-import LocationIcon from '../../public/images/location.svg';
-import InstaIcon from '../../public/images/instagram.svg';
-import PhoneIcon from '../../public/images/phone.svg';
-import MailIcon from '../../public/images/mail.svg';
-import FooterBg from '../../public/images/backgroundLine2.png';
-import { Link } from 'react-scroll/modules';
-import styles from './Footer.module.css';
-import { useRouter } from 'next/router';
-import en from '../../locales/en';
-import sr from '../../locales/sr';
-import NextLink from 'next/link';
+import Logo from "../UI/Logo";
+import Paragraph from "../UI/Paragraph";
+import FooterLink from "./FooterLink";
+import Image from "next/image";
+import LocationIcon from "../../public/images/location.svg";
+import InstaIcon from "../../public/images/instagram.svg";
+import PhoneIcon from "../../public/images/phone.svg";
+import MailIcon from "../../public/images/mail.svg";
+import FooterBg from "../../public/images/backgroundLine2.png";
+import { Link } from "react-scroll/modules";
+import styles from "./Footer.module.css";
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import sr from "../../locales/sr";
+import NextLink from "next/link";
 
 const Footer = () => {
   const router = useRouter();
   const { locale } = router;
-  const t = locale === 'en' ? en : sr;
+  const t = locale === "en" ? en : sr;
   return (
     <div className="relative bg-solid-white flex justify-center items-center flex flex-col overflow-hidden">
       <Image
@@ -27,7 +27,7 @@ const Footer = () => {
         // sizes="(min-width: 768px) 30vw, 100vw"
         className={`${styles.footerBg} object-contain absolute z-10 max-w-[950px] max-h-[932px] w-auto h-auto opacity-30 scale-125 md:scale-[185%]`}
         placeholder="blur"
-        blurDataURL={'../public/images/backgroundLine.png'}
+        blurDataURL={"../public/images/backgroundLine.png"}
       />
       <div className="max-w-[1172px] w-full mx-auto my-[55px] px-4 z-20">
         <div className="mb-[15px] flex items-left">
@@ -46,9 +46,9 @@ const Footer = () => {
             <div className="max-w-[390px] w-full mb-[15px] md:mb-[25px]">
               <Paragraph
                 paragraph={
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium nulla metus, quis potenti vitae. Dolor eget suspendisse vulputate feugiat.'
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium nulla metus, quis potenti vitae. Dolor eget suspendisse vulputate feugiat."
                 }
-                className={'text-gray flex text-left'}
+                className={"text-gray flex text-left"}
               />
             </div>
             <div className="transition-transform duration-500 ease-in-out flex gap-[7px]">
@@ -59,7 +59,7 @@ const Footer = () => {
               />
 
               <a
-                href={'https://goo.gl/maps/tjdbWfNDuWFekB37A'}
+                href={"https://goo.gl/maps/tjdbWfNDuWFekB37A"}
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-blue hover:duration-500"
@@ -74,23 +74,23 @@ const Footer = () => {
                 <li>
                   <FooterLink
                     text={t.navRoofConfigurator}
-                    to={'roof-configurator'}
+                    to={"roof-configurator"}
                   />
                 </li>
                 <li>
                   <FooterLink
                     text={t.navRoofMaintainance}
-                    to={'roof-maintenance'}
+                    to={"roof-maintenance"}
                   />
                 </li>
                 <li>
-                  <FooterLink text={t.navAboutUs} to={'about-us'} />
+                  <FooterLink text={t.navAboutUs} to={"about-us"} />
                 </li>
                 <li>
-                  <FooterLink text={t.navWhyWe} to={'why-we'} />
+                  <FooterLink text={t.navWhyWe} to={"why-we"} />
                 </li>
                 <li>
-                  <FooterLink text={t.navGallery} to={'gallery'} />
+                  <FooterLink text={t.navGallery} to={"gallery"} />
                 </li>
               </ul>
             </div>

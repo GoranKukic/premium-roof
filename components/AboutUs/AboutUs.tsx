@@ -1,29 +1,43 @@
-import { useEffect } from 'react';
-import Headline from '../UI/Headline';
-import Paragraph from '../UI/Paragraph';
-import CtaButton from '../UI/CtaButton';
-import HeadlineUnderline from '../UI/HeadlineUnderline';
-import { Link } from 'react-scroll/modules';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useRouter } from 'next/router';
-import en from '../../locales/en';
-import sr from '../../locales/sr';
+import { useEffect } from "react";
+import Headline from "../UI/Headline";
+import Paragraph from "../UI/Paragraph";
+import CtaButton from "../UI/CtaButton";
+import HeadlineUnderline from "../UI/HeadlineUnderline";
+import { Link } from "react-scroll/modules";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import styles from "./AboutUs.module.css";
+import Image from "next/image";
+import AboutUsBg from "../../public/images/aboutbg.jpg";
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import sr from "../../locales/sr";
 
 const AboutUs = () => {
   useEffect(() => {
-    AOS.init({ duration: 800, easing: 'ease-in-sine' });
+    AOS.init({ duration: 800, easing: "ease-in-sine" });
   }, []);
 
   const router = useRouter();
   const { locale } = router;
-  const t = locale === 'en' ? en : sr;
+  const t = locale === "en" ? en : sr;
 
   return (
     <div
       id="about-us"
-      className="relative bg-about-us-bg bg-cover bg-center bg-fixed flex justify-center items-center px-4 z-20"
+      className="relative flex justify-center items-center px-4"
     >
+      <div className={`${styles.paralaxContainer}`}>
+        <Image
+          src={AboutUsBg}
+          alt={"About Us background image"}
+          fill
+          className="absolute object-cover object-top h-full"
+          placeholder="blur"
+          blurDataURL="../../public/images/aboutbg.jpg"
+          sizes="100vw"
+        />
+      </div>
       <div className="max-w-[1172px] w-full my-[100px] mx-auto px-4 bg-[rgba(255, 255, 255, 0.29)] p-4 backdrop-blur-[8.5px]">
         <div
           data-aos="zoom-in-up"
@@ -39,7 +53,7 @@ const AboutUs = () => {
               underline={
                 <HeadlineUnderline
                   underlinedText={`Premium Roof?`}
-                  color={'black'}
+                  color={"black"}
                 />
               }
             ></Headline>
@@ -47,7 +61,7 @@ const AboutUs = () => {
           <div className="text-center mb-[34px]">
             <Paragraph
               paragraph={
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium nulla metus, quis potenti vitae. Dolor eget suspendisse vulputate feugiat. Sagittis at tincidunt tristique ut. Consectetur ultrices aliquam amet a egestas. Hac elit ornare rhoncus arcu, vel vitae felis.'
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium nulla metus, quis potenti vitae. Dolor eget suspendisse vulputate feugiat. Sagittis at tincidunt tristique ut. Consectetur ultrices aliquam amet a egestas. Hac elit ornare rhoncus arcu, vel vitae felis."
               }
               className={"text-center"}
             />

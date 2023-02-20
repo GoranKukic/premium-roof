@@ -1,14 +1,14 @@
-import ReactBeforeSliderComponent from 'react-before-after-slider-component';
-import 'react-before-after-slider-component/dist/build.css';
-import Image from 'next/image';
-import BeforeImage from '../../public/images/before.jpg';
-import AfterImage from '../../public/images/after.jpg';
-import Dot from '../../public/images/dot.svg';
-import Arrow from '../../public/images/before-after-arrow.svg';
-import Pointer from '../../public/images/pointer.svg';
-import { useRouter } from 'next/router';
-import en from '../../locales/en';
-import sr from '../../locales/sr';
+import ReactBeforeSliderComponent from "react-before-after-slider-component";
+import "react-before-after-slider-component/dist/build.css";
+import Image from "next/image";
+import BeforeImage from "../../public/images/before.jpg";
+import AfterImage from "../../public/images/after.jpg";
+import Dot from "../../public/images/dot.svg";
+import Arrow from "../../public/images/before-after-arrow.svg";
+import Pointer from "../../public/images/pointer.svg";
+import { useRouter } from "next/router";
+import en from "../../locales/en";
+import sr from "../../locales/sr";
 
 interface ImageProps {
   imageUrl: string;
@@ -34,32 +34,32 @@ interface DelimiterIconStylesProps {
 const BeforeAndAfterSlider: React.FC = () => {
   const FIRST_IMAGE: ImageProps = {
     imageUrl: AfterImage.src,
-    alt: 'After',
+    alt: "After",
   };
   const SECOND_IMAGE: ImageProps = {
     imageUrl: BeforeImage.src,
-    alt: 'Before',
+    alt: "Before",
   };
 
   const delimiterIconStyles: DelimiterIconStylesProps = {
-    width: '48px',
-    height: '48px',
-    backgroundSize: 'cover',
-    borderRadius: '50%',
-    marginTop: '-24px',
-    marginLeft: '-24px',
+    width: "48px",
+    height: "48px",
+    backgroundSize: "cover",
+    borderRadius: "50%",
+    marginTop: "-24px",
+    marginLeft: "-24px",
     background: ` #1A8CCC url(${Pointer.src}) no-repeat center`,
-    position: 'absolute',
-    top: '50%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    cursor: 'pointer',
+    position: "absolute",
+    top: "50%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    cursor: "pointer",
   };
 
   const router = useRouter();
   const { locale } = router;
-  const t = locale === 'en' ? en : sr;
+  const t = locale === "en" ? en : sr;
 
   return (
     <div className="max-w-[557px] w-full max-h-[557px] h-full relative">
@@ -99,7 +99,7 @@ const BeforeAndAfterSlider: React.FC = () => {
       <ReactBeforeSliderComponent
         firstImage={FIRST_IMAGE}
         secondImage={SECOND_IMAGE}
-        delimiterColor={'#F8FAFB'}
+        delimiterColor={"#F8FAFB"}
         delimiterIconStyles={delimiterIconStyles}
       />
       <div className="absolute bottom-[-35px] left-0 flex gap-[6px] flex items-center">

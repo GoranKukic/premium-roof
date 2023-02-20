@@ -11,10 +11,6 @@ This project is:
 - Fully responsive down to 250px of viewport width,
 - Has internationalization (i18n), languages are english and serbian,
 
-## Development requirements
-
-- [Node.js](http://nodejs.org/)
-
 ## Live preview
 
 [See live here](https://premium-roof.vercel.app/)
